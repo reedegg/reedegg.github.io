@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Policy to Packets</title>
+    <link>https://reedegg.github.io/tags/</link>
+    <description>Recent content in Tags on Policy to Packets</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>reedveggleston@gmail.com (Reed Eggleston)</managingEditor>
+    <webMaster>reedveggleston@gmail.com (Reed Eggleston)</webMaster>
+    <copyright>© 2026 Reed Eggleston</copyright>
+    <lastBuildDate>Thu, 12 Feb 2026 15:52:00 +0000</lastBuildDate><atom:link href="https://reedegg.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>False_Positive</title>
+      <link>https://reedegg.github.io/tags/false_positive/</link>
+      <pubDate>Thu, 12 Feb 2026 15:52:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/false_positive/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Hybrid-Analysis</title>
+      <link>https://reedegg.github.io/tags/hybrid-analysis/</link>
+      <pubDate>Thu, 12 Feb 2026 15:52:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/hybrid-analysis/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>SIEM</title>
+      <link>https://reedegg.github.io/tags/siem/</link>
+      <pubDate>Thu, 12 Feb 2026 15:52:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/siem/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>SOC</title>
+      <link>https://reedegg.github.io/tags/soc/</link>
+      <pubDate>Thu, 12 Feb 2026 15:52:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/soc/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>VirusTotal</title>
+      <link>https://reedegg.github.io/tags/virustotal/</link>
+      <pubDate>Thu, 12 Feb 2026 15:52:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/virustotal/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Writeup</title>
+      <link>https://reedegg.github.io/tags/writeup/</link>
+      <pubDate>Thu, 12 Feb 2026 15:52:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/writeup/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Malware</title>
+      <link>https://reedegg.github.io/tags/malware/</link>
+      <pubDate>Thu, 12 Feb 2026 14:53:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/malware/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Phishing</title>
+      <link>https://reedegg.github.io/tags/phishing/</link>
+      <pubDate>Thu, 12 Feb 2026 14:53:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/phishing/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>True_Positive</title>
+      <link>https://reedegg.github.io/tags/true_positive/</link>
+      <pubDate>Thu, 12 Feb 2026 14:53:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/true_positive/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

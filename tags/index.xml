@@ -9,7 +9,257 @@
     <managingEditor>reedveggleston@gmail.com (Reed Eggleston)</managingEditor>
     <webMaster>reedveggleston@gmail.com (Reed Eggleston)</webMaster>
     <copyright>© 2026 Reed Eggleston</copyright>
-    <lastBuildDate>Thu, 12 Feb 2026 15:52:00 +0000</lastBuildDate><atom:link href="https://reedegg.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Feb 2026 22:48:00 +0000</lastBuildDate><atom:link href="https://reedegg.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Challenge</title>
+      <link>https://reedegg.github.io/tags/challenge/</link>
+      <pubDate>Sat, 14 Feb 2026 22:48:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/challenge/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Easy</title>
+      <link>https://reedegg.github.io/tags/easy/</link>
+      <pubDate>Sat, 14 Feb 2026 22:48:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/easy/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Security_Analyst</title>
+      <link>https://reedegg.github.io/tags/security_analyst/</link>
+      <pubDate>Sat, 14 Feb 2026 22:48:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/security_analyst/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Wireshark</title>
+      <link>https://reedegg.github.io/tags/wireshark/</link>
+      <pubDate>Sat, 14 Feb 2026 22:48:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/wireshark/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Writeup</title>
+      <link>https://reedegg.github.io/tags/writeup/</link>
+      <pubDate>Sat, 14 Feb 2026 22:48:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/writeup/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Hard</title>
+      <link>https://reedegg.github.io/tags/hard/</link>
+      <pubDate>Sat, 14 Feb 2026 21:07:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/hard/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Malware</title>
+      <link>https://reedegg.github.io/tags/malware/</link>
+      <pubDate>Sat, 14 Feb 2026 21:07:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/malware/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Oletools</title>
+      <link>https://reedegg.github.io/tags/oletools/</link>
+      <pubDate>Sat, 14 Feb 2026 21:07:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/oletools/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Very_Easy</title>
+      <link>https://reedegg.github.io/tags/very_easy/</link>
+      <pubDate>Sat, 14 Feb 2026 18:22:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/very_easy/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>XSS</title>
+      <link>https://reedegg.github.io/tags/xss/</link>
+      <pubDate>Sat, 14 Feb 2026 18:22:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/xss/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Macros</title>
+      <link>https://reedegg.github.io/tags/macros/</link>
+      <pubDate>Sat, 14 Feb 2026 00:39:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/macros/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Medium</title>
+      <link>https://reedegg.github.io/tags/medium/</link>
+      <pubDate>Sat, 14 Feb 2026 00:39:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/medium/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>XLM</title>
+      <link>https://reedegg.github.io/tags/xlm/</link>
+      <pubDate>Sat, 14 Feb 2026 00:39:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/xlm/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>XLMMacroDeobfuscator</title>
+      <link>https://reedegg.github.io/tags/xlmmacrodeobfuscator/</link>
+      <pubDate>Sat, 14 Feb 2026 00:39:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/xlmmacrodeobfuscator/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>VirusTotal</title>
+      <link>https://reedegg.github.io/tags/virustotal/</link>
+      <pubDate>Sat, 14 Feb 2026 00:15:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/virustotal/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>VBA</title>
+      <link>https://reedegg.github.io/tags/vba/</link>
+      <pubDate>Fri, 13 Feb 2026 16:41:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/vba/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Beginner</title>
+      <link>https://reedegg.github.io/tags/beginner/</link>
+      <pubDate>Fri, 13 Feb 2026 14:08:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/beginner/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Sigma</title>
+      <link>https://reedegg.github.io/tags/sigma/</link>
+      <pubDate>Fri, 13 Feb 2026 14:08:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/sigma/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>YAML</title>
+      <link>https://reedegg.github.io/tags/yaml/</link>
+      <pubDate>Fri, 13 Feb 2026 14:08:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/yaml/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>https://reedegg.github.io/tags/docker/</link>
+      <pubDate>Thu, 12 Feb 2026 21:20:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/docker/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Flask</title>
+      <link>https://reedegg.github.io/tags/flask/</link>
+      <pubDate>Thu, 12 Feb 2026 21:20:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/flask/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Jinja2</title>
+      <link>https://reedegg.github.io/tags/jinja2/</link>
+      <pubDate>Thu, 12 Feb 2026 21:20:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/jinja2/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://reedegg.github.io/tags/python/</link>
+      <pubDate>Thu, 12 Feb 2026 21:20:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/python/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>SSTI</title>
+      <link>https://reedegg.github.io/tags/ssti/</link>
+      <pubDate>Thu, 12 Feb 2026 21:20:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/ssti/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Zip_Slip</title>
+      <link>https://reedegg.github.io/tags/zip_slip/</link>
+      <pubDate>Thu, 12 Feb 2026 21:20:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://reedegg.github.io/tags/zip_slip/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>False_Positive</title>
@@ -47,36 +297,6 @@
       <pubDate>Thu, 12 Feb 2026 15:52:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
       <guid>https://reedegg.github.io/tags/soc/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>VirusTotal</title>
-      <link>https://reedegg.github.io/tags/virustotal/</link>
-      <pubDate>Thu, 12 Feb 2026 15:52:00 +0000</pubDate>
-      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://reedegg.github.io/tags/virustotal/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Writeup</title>
-      <link>https://reedegg.github.io/tags/writeup/</link>
-      <pubDate>Thu, 12 Feb 2026 15:52:00 +0000</pubDate>
-      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://reedegg.github.io/tags/writeup/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Malware</title>
-      <link>https://reedegg.github.io/tags/malware/</link>
-      <pubDate>Thu, 12 Feb 2026 14:53:00 +0000</pubDate>
-      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://reedegg.github.io/tags/malware/</guid>
       <description></description>
       
     </item>

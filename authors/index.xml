@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors on Policy to Packets</title>
-    <link>https://reedegg.github.io/authors/</link>
+    <link>https://www.policytopackets.com/authors/</link>
     <description>Recent content in Authors on Policy to Packets</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>reedveggleston@gmail.com (Reed Eggleston)</managingEditor>
     <webMaster>reedveggleston@gmail.com (Reed Eggleston)</webMaster>
     <copyright>© 2026 Reed Eggleston</copyright>
-    <atom:link href="https://reedegg.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.policytopackets.com/authors/index.xml" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>

@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Wireshark on Policy to Packets</title>
-    <link>https://reedegg.github.io/tags/wireshark/</link>
+    <link>https://www.policytopackets.com/tags/wireshark/</link>
     <description>Recent content in Wireshark on Policy to Packets</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>reedveggleston@gmail.com (Reed Eggleston)</managingEditor>
     <webMaster>reedveggleston@gmail.com (Reed Eggleston)</webMaster>
     <copyright>© 2026 Reed Eggleston</copyright>
-    <lastBuildDate>Sat, 14 Feb 2026 22:48:00 +0000</lastBuildDate><atom:link href="https://reedegg.github.io/tags/wireshark/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Feb 2026 22:48:00 +0000</lastBuildDate><atom:link href="https://www.policytopackets.com/tags/wireshark/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>[Writeup] LetsDefend - Challenge - Shellshock Attack</title>
-      <link>https://reedegg.github.io/writeups/letsdefend/challenges/shellshock_attack/</link>
+      <link>https://www.policytopackets.com/writeups/letsdefend/challenges/shellshock_attack/</link>
       <pubDate>Sat, 14 Feb 2026 22:48:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://reedegg.github.io/writeups/letsdefend/challenges/shellshock_attack/</guid>
-      <description></description>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/challenges/shellshock_attack/</guid>
+      <description>Step-by-step LetsDefend challenge writeup analyzing Shellshock attack activity in a PCAP file using Wireshark, identifying the target server details and the injected command from a SOC analyst perspective.</description>
       
     </item>
     
     <item>
       <title>[Writeup] LetsDefend - Challenge - Port Scan Activity</title>
-      <link>https://reedegg.github.io/writeups/letsdefend/challenges/port_scan_activity/</link>
+      <link>https://www.policytopackets.com/writeups/letsdefend/challenges/port_scan_activity/</link>
       <pubDate>Sat, 14 Feb 2026 22:10:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://reedegg.github.io/writeups/letsdefend/challenges/port_scan_activity/</guid>
-      <description></description>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/challenges/port_scan_activity/</guid>
+      <description>Step-by-step LetsDefend challenge writeup analyzing port scan activity in a PCAP file using Wireshark, identifying the scanning host, discovered systems, and network indicators from a SOC analyst perspective.</description>
       
     </item>
     

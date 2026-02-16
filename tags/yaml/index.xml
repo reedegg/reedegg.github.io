@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>YAML on Policy to Packets</title>
-    <link>https://reedegg.github.io/tags/yaml/</link>
+    <link>https://www.policytopackets.com/tags/yaml/</link>
     <description>Recent content in YAML on Policy to Packets</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>reedveggleston@gmail.com (Reed Eggleston)</managingEditor>
     <webMaster>reedveggleston@gmail.com (Reed Eggleston)</webMaster>
     <copyright>© 2026 Reed Eggleston</copyright>
-    <lastBuildDate>Fri, 13 Feb 2026 14:08:00 +0000</lastBuildDate><atom:link href="https://reedegg.github.io/tags/yaml/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Feb 2026 14:08:00 +0000</lastBuildDate><atom:link href="https://www.policytopackets.com/tags/yaml/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>[Writeup] LetsDefend - Challenge - Learn Sigma</title>
-      <link>https://reedegg.github.io/writeups/letsdefend/challenges/learn_sigma/</link>
+      <link>https://www.policytopackets.com/writeups/letsdefend/challenges/learn_sigma/</link>
       <pubDate>Fri, 13 Feb 2026 14:08:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://reedegg.github.io/writeups/letsdefend/challenges/learn_sigma/</guid>
-      <description></description>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/challenges/learn_sigma/</guid>
+      <description>Step-by-step LetsDefend challenge writeup analyzing a Sigma rule for detecting bitsadmin.exe abuse, explaining rule structure, detection logic, and ransomware-related process_creation monitoring from a SOC analyst perspective.</description>
       
     </item>
     

@@ -2,182 +2,182 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Writeup on Policy to Packets</title>
-    <link>https://reedegg.github.io/tags/writeup/</link>
+    <link>https://www.policytopackets.com/tags/writeup/</link>
     <description>Recent content in Writeup on Policy to Packets</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>reedveggleston@gmail.com (Reed Eggleston)</managingEditor>
     <webMaster>reedveggleston@gmail.com (Reed Eggleston)</webMaster>
     <copyright>© 2026 Reed Eggleston</copyright>
-    <lastBuildDate>Sat, 14 Feb 2026 22:48:00 +0000</lastBuildDate><atom:link href="https://reedegg.github.io/tags/writeup/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Feb 2026 22:48:00 +0000</lastBuildDate><atom:link href="https://www.policytopackets.com/tags/writeup/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>[Writeup] LetsDefend - Challenge - Shellshock Attack</title>
-      <link>https://reedegg.github.io/writeups/letsdefend/challenges/shellshock_attack/</link>
+      <link>https://www.policytopackets.com/writeups/letsdefend/challenges/shellshock_attack/</link>
       <pubDate>Sat, 14 Feb 2026 22:48:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://reedegg.github.io/writeups/letsdefend/challenges/shellshock_attack/</guid>
-      <description></description>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/challenges/shellshock_attack/</guid>
+      <description>Step-by-step LetsDefend challenge writeup analyzing Shellshock attack activity in a PCAP file using Wireshark, identifying the target server details and the injected command from a SOC analyst perspective.</description>
       
     </item>
     
     <item>
       <title>[Writeup] LetsDefend - Challenge - Port Scan Activity</title>
-      <link>https://reedegg.github.io/writeups/letsdefend/challenges/port_scan_activity/</link>
+      <link>https://www.policytopackets.com/writeups/letsdefend/challenges/port_scan_activity/</link>
       <pubDate>Sat, 14 Feb 2026 22:10:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://reedegg.github.io/writeups/letsdefend/challenges/port_scan_activity/</guid>
-      <description></description>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/challenges/port_scan_activity/</guid>
+      <description>Step-by-step LetsDefend challenge writeup analyzing port scan activity in a PCAP file using Wireshark, identifying the scanning host, discovered systems, and network indicators from a SOC analyst perspective.</description>
       
     </item>
     
     <item>
       <title>[Writeup] LetsDefend - Challenge - MSHTML</title>
-      <link>https://reedegg.github.io/writeups/letsdefend/challenges/mshtml/</link>
+      <link>https://www.policytopackets.com/writeups/letsdefend/challenges/mshtml/</link>
       <pubDate>Sat, 14 Feb 2026 21:07:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://reedegg.github.io/writeups/letsdefend/challenges/mshtml/</guid>
-      <description></description>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/challenges/mshtml/</guid>
+      <description>In-depth LetsDefend challenge writeup analyzing malicious Office documents exploiting MSHTML (CVE-2021-40444), using oletools to extract indicators, identify malicious domains and IPs, and investigate document-based exploitation from a SOC analyst perspective.</description>
       
     </item>
     
     <item>
       <title>[Writeup] HackTheBox Labs - Challenge - OnlyHacks</title>
-      <link>https://reedegg.github.io/writeups/hackthebox/challenges/onlyhacks/</link>
+      <link>https://www.policytopackets.com/writeups/hackthebox/challenges/onlyhacks/</link>
       <pubDate>Sat, 14 Feb 2026 18:22:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://reedegg.github.io/writeups/hackthebox/challenges/onlyhacks/</guid>
-      <description></description>
+      <guid>https://www.policytopackets.com/writeups/hackthebox/challenges/onlyhacks/</guid>
+      <description>Step-by-step HackTheBox “OnlyHacks” challenge writeup demonstrating cross-site scripting (XSS) exploitation, session cookie theft, and practical web application enumeration in a Very Easy web challenge.</description>
       
     </item>
     
     <item>
       <title>[Writeup] LetsDefend - Challenge - Excel 4.0 Macros</title>
-      <link>https://reedegg.github.io/writeups/letsdefend/challenges/excel_4.0_macros/</link>
+      <link>https://www.policytopackets.com/writeups/letsdefend/challenges/excel_4.0_macros/</link>
       <pubDate>Sat, 14 Feb 2026 00:39:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://reedegg.github.io/writeups/letsdefend/challenges/excel_4.0_macros/</guid>
-      <description></description>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/challenges/excel_4.0_macros/</guid>
+      <description>Step-by-step LetsDefend challenge writeup analyzing a malicious Excel 4.0 (XLM) macro document using XLMMacroDeobfuscator and oletools to identify process execution, regsvr32 abuse, and DLL payload behavior.</description>
       
     </item>
     
     <item>
       <title>[Writeup] LetsDefend - Challenge - Malicious Doc</title>
-      <link>https://reedegg.github.io/writeups/letsdefend/challenges/malicious_doc/</link>
+      <link>https://www.policytopackets.com/writeups/letsdefend/challenges/malicious_doc/</link>
       <pubDate>Sat, 14 Feb 2026 00:15:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://reedegg.github.io/writeups/letsdefend/challenges/malicious_doc/</guid>
-      <description></description>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/challenges/malicious_doc/</guid>
+      <description>Step-by-step LetsDefend challenge writeup analyzing a malicious Word document using VirusTotal to identify RTF exploit behavior, CVE-2017-11882 abuse, payload delivery, and network communication from a SOC analyst perspective.</description>
       
     </item>
     
     <item>
       <title>[Writeup] LetsDefend - Challenge - Remote Working</title>
-      <link>https://reedegg.github.io/writeups/letsdefend/challenges/remote_working/</link>
+      <link>https://www.policytopackets.com/writeups/letsdefend/challenges/remote_working/</link>
       <pubDate>Fri, 13 Feb 2026 23:08:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://reedegg.github.io/writeups/letsdefend/challenges/remote_working/</guid>
-      <description></description>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/challenges/remote_working/</guid>
+      <description>Step-by-step LetsDefend challenge writeup analyzing a malicious XLS file using VirusTotal to identify detection signatures, dropped files, spyware download URLs, and file intelligence indicators from a SOC analyst perspective.</description>
       
     </item>
     
     <item>
       <title>[Writeup] LetsDefend - Challenge - Malicious VBA</title>
-      <link>https://reedegg.github.io/writeups/letsdefend/challenges/malicious_vba/</link>
+      <link>https://www.policytopackets.com/writeups/letsdefend/challenges/malicious_vba/</link>
       <pubDate>Fri, 13 Feb 2026 16:41:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://reedegg.github.io/writeups/letsdefend/challenges/malicious_vba/</guid>
-      <description></description>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/challenges/malicious_vba/</guid>
+      <description>Step-by-step LetsDefend challenge writeup analyzing a malicious VBA macro document, decoding obfuscated hex strings, identifying payload delivery, and investigating HTTP communication and WMI execution techniques from a SOC analyst perspective.</description>
       
     </item>
     
     <item>
       <title>[Writeup] LetsDefend - Challenge - Learn Sigma</title>
-      <link>https://reedegg.github.io/writeups/letsdefend/challenges/learn_sigma/</link>
+      <link>https://www.policytopackets.com/writeups/letsdefend/challenges/learn_sigma/</link>
       <pubDate>Fri, 13 Feb 2026 14:08:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://reedegg.github.io/writeups/letsdefend/challenges/learn_sigma/</guid>
-      <description></description>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/challenges/learn_sigma/</guid>
+      <description>Step-by-step LetsDefend challenge writeup analyzing a Sigma rule for detecting bitsadmin.exe abuse, explaining rule structure, detection logic, and ransomware-related process_creation monitoring from a SOC analyst perspective.</description>
       
     </item>
     
     <item>
       <title>[Writeup] HackTheBox Labs - Challenge - Slippy</title>
-      <link>https://reedegg.github.io/writeups/hackthebox/challenges/slippy/</link>
+      <link>https://www.policytopackets.com/writeups/hackthebox/challenges/slippy/</link>
       <pubDate>Thu, 12 Feb 2026 21:20:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://reedegg.github.io/writeups/hackthebox/challenges/slippy/</guid>
-      <description></description>
+      <guid>https://www.policytopackets.com/writeups/hackthebox/challenges/slippy/</guid>
+      <description>Step-by-step HackTheBox “Slippy” challenge writeup demonstrating Zip Slip exploitation, Jinja2 SSTI abuse, and Flask-based web application compromise within a Docker environment.</description>
       
     </item>
     
     <item>
       <title>[Writeup] LetsDefend - SOC104 - Malware Detected - EventID 84</title>
-      <link>https://reedegg.github.io/writeups/letsdefend/soc/104_84/</link>
+      <link>https://www.policytopackets.com/writeups/letsdefend/soc/104_84/</link>
       <pubDate>Thu, 12 Feb 2026 15:52:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://reedegg.github.io/writeups/letsdefend/soc/104_84/</guid>
-      <description></description>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/soc/104_84/</guid>
+      <description>Step-by-step LetsDefend SOC104 alert writeup investigating a malware detection event (EventID 84), validating the WinRAR installer hash using VirusTotal and Hybrid Analysis, reviewing SIEM logs, and determining a false positive from a SOC analyst perspective.</description>
       
     </item>
     
     <item>
       <title>[Writeup] LetsDefend - SOC282 - Phishing Alert - Deceptive Mail Detected - EventID 257</title>
-      <link>https://reedegg.github.io/writeups/letsdefend/soc/282_257/</link>
+      <link>https://www.policytopackets.com/writeups/letsdefend/soc/282_257/</link>
       <pubDate>Thu, 12 Feb 2026 14:53:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://reedegg.github.io/writeups/letsdefend/soc/282_257/</guid>
-      <description></description>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/soc/282_257/</guid>
+      <description>Step-by-step LetsDefend SOC282 phishing alert writeup investigating a deceptive email (EventID 257), analyzing a malicious ZIP attachment in VirusTotal, identifying C2 communication, correlating SIEM logs, and initiating endpoint containment from a SOC analyst perspective.</description>
       
     </item>
     
     <item>
       <title>[Writeup] LetsDefend - SOC145 - Ransomware Detected - EventID 92</title>
-      <link>https://reedegg.github.io/writeups/letsdefend/soc/145_92/</link>
+      <link>https://www.policytopackets.com/writeups/letsdefend/soc/145_92/</link>
       <pubDate>Wed, 11 Feb 2026 16:10:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://reedegg.github.io/writeups/letsdefend/soc/145_92/</guid>
-      <description></description>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/soc/145_92/</guid>
+      <description>Step-by-step LetsDefend SOC145 ransomware alert writeup investigating a true positive malware detection (EventID 92), validating Avaddon ransomware via VirusTotal and Hybrid Analysis, identifying EDR removal, and initiating endpoint containment from a SOC analyst perspective.</description>
       
     </item>
     
     <item>
       <title>[Writeup] LetsDefend - SOC109 - Emotet Malware Detected - EventID 85</title>
-      <link>https://reedegg.github.io/writeups/letsdefend/soc/109-85/</link>
+      <link>https://www.policytopackets.com/writeups/letsdefend/soc/109-85/</link>
       <pubDate>Wed, 11 Feb 2026 14:48:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://reedegg.github.io/writeups/letsdefend/soc/109-85/</guid>
-      <description></description>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/soc/109-85/</guid>
+      <description>Step-by-step LetsDefend SOC109 alert writeup investigating an Emotet malware detection (EventID 85), validating the hash in VirusTotal, reviewing SIEM and endpoint logs, and confirming a true positive successfully quarantined by EDR.</description>
       
     </item>
     
     <item>
       <title>[Writeup] LetsDefend - SOC104 - Malware Detected - EventID 36</title>
-      <link>https://reedegg.github.io/writeups/letsdefend/soc/104-36/</link>
+      <link>https://www.policytopackets.com/writeups/letsdefend/soc/104-36/</link>
       <pubDate>Wed, 11 Feb 2026 12:46:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://reedegg.github.io/writeups/letsdefend/soc/104-36/</guid>
-      <description></description>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/soc/104-36/</guid>
+      <description>Step-by-step LetsDefend SOC104 alert writeup investigating a malware detection (EventID 36), confirming Maze ransomware via VirusTotal and Hybrid Analysis, identifying C2 communication, and executing containment from a SOC analyst perspective.</description>
       
     </item>
     
     <item>
       <title>[Writeup] LetsDefend - SOC119 - Proxy - Malicious Executable File Detected - EventID 83</title>
-      <link>https://reedegg.github.io/writeups/letsdefend/soc/119_83/</link>
+      <link>https://www.policytopackets.com/writeups/letsdefend/soc/119_83/</link>
       <pubDate>Wed, 11 Feb 2026 11:02:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://reedegg.github.io/writeups/letsdefend/soc/119_83/</guid>
-      <description></description>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/soc/119_83/</guid>
+      <description>Step-by-step LetsDefend SOC119 proxy alert writeup investigating a malicious executable detection (EventID 83), validating URL, domain, and IP reputation using VirusTotal and log analysis, and determining a false positive from a SOC analyst perspective.</description>
       
     </item>
     
     <item>
       <title>[Writeup] LetsDefend - SOC104 - Malware Detected - EventID 14</title>
-      <link>https://reedegg.github.io/writeups/letsdefend/soc/104_14/</link>
+      <link>https://www.policytopackets.com/writeups/letsdefend/soc/104_14/</link>
       <pubDate>Tue, 10 Feb 2026 22:43:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://reedegg.github.io/writeups/letsdefend/soc/104_14/</guid>
-      <description></description>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/soc/104_14/</guid>
+      <description>Step-by-step LetsDefend SOC alert writeup analyzing a malware detection event (EventID 14), validating file reputation in VirusTotal, reviewing endpoint and log data, and determining a false positive from a SOC analyst perspective.</description>
       
     </item>
     

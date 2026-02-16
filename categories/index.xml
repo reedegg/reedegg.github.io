@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Policy to Packets</title>
-    <link>https://reedegg.github.io/categories/</link>
+    <link>https://www.policytopackets.com/categories/</link>
     <description>Recent content in Categories on Policy to Packets</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>reedveggleston@gmail.com (Reed Eggleston)</managingEditor>
     <webMaster>reedveggleston@gmail.com (Reed Eggleston)</webMaster>
     <copyright>© 2026 Reed Eggleston</copyright>
-    <lastBuildDate>Sat, 14 Feb 2026 22:48:00 +0000</lastBuildDate><atom:link href="https://reedegg.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Feb 2026 22:48:00 +0000</lastBuildDate><atom:link href="https://www.policytopackets.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>LetsDefend</title>
-      <link>https://reedegg.github.io/categories/letsdefend/</link>
+      <link>https://www.policytopackets.com/categories/letsdefend/</link>
       <pubDate>Sat, 14 Feb 2026 22:48:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://reedegg.github.io/categories/letsdefend/</guid>
+      <guid>https://www.policytopackets.com/categories/letsdefend/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>HackTheBox</title>
-      <link>https://reedegg.github.io/categories/hackthebox/</link>
+      <link>https://www.policytopackets.com/categories/hackthebox/</link>
       <pubDate>Sat, 14 Feb 2026 18:22:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://reedegg.github.io/categories/hackthebox/</guid>
+      <guid>https://www.policytopackets.com/categories/hackthebox/</guid>
       <description></description>
       
     </item>

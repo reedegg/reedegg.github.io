@@ -2,7 +2,7 @@
 
 Personal cybersecurity blog documenting hands-on labs, SOC investigations, and security-focused building.
 
-Live Site: https://reedegg.github.io/  
+Live Site: [https://www.policytopackets.com](https://www.policytopackets.com/)
 
 ---
 

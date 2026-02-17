@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Type_Proxy on Policy to Packets</title>
+    <link>https://www.policytopackets.com/tags/type_proxy/</link>
+    <description>Recent content in Type_Proxy on Policy to Packets</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>reedveggleston@gmail.com (Reed Eggleston)</managingEditor>
+    <webMaster>reedveggleston@gmail.com (Reed Eggleston)</webMaster>
+    <copyright>© 2026 Reed Eggleston</copyright>
+    <lastBuildDate>Wed, 11 Feb 2026 11:02:00 +0000</lastBuildDate><atom:link href="https://www.policytopackets.com/tags/type_proxy/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>[Writeup] LetsDefend - SOC119 - Proxy - Malicious Executable File Detected - EventID 83</title>
+      <link>https://www.policytopackets.com/writeups/letsdefend/soc/119_83/</link>
+      <pubDate>Wed, 11 Feb 2026 11:02:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/soc/119_83/</guid>
+      <description>Step-by-step LetsDefend SOC119 proxy alert writeup investigating a malicious executable detection (EventID 83), validating URL, domain, and IP reputation using VirusTotal and log analysis, and determining a false positive from a SOC analyst perspective.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

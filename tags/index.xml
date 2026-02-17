@@ -9,7 +9,107 @@
     <managingEditor>reedveggleston@gmail.com (Reed Eggleston)</managingEditor>
     <webMaster>reedveggleston@gmail.com (Reed Eggleston)</webMaster>
     <copyright>© 2026 Reed Eggleston</copyright>
-    <lastBuildDate>Sat, 14 Feb 2026 22:48:00 +0000</lastBuildDate><atom:link href="https://www.policytopackets.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Feb 2026 21:05:00 +0000</lastBuildDate><atom:link href="https://www.policytopackets.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>False_Positive</title>
+      <link>https://www.policytopackets.com/tags/false_positive/</link>
+      <pubDate>Mon, 16 Feb 2026 21:05:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/false_positive/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>SIEM</title>
+      <link>https://www.policytopackets.com/tags/siem/</link>
+      <pubDate>Mon, 16 Feb 2026 21:05:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/siem/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>SOC</title>
+      <link>https://www.policytopackets.com/tags/soc/</link>
+      <pubDate>Mon, 16 Feb 2026 21:05:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/soc/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Type_Exchange</title>
+      <link>https://www.policytopackets.com/tags/type_exchange/</link>
+      <pubDate>Mon, 16 Feb 2026 21:05:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/type_exchange/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Writeup</title>
+      <link>https://www.policytopackets.com/tags/writeup/</link>
+      <pubDate>Mon, 16 Feb 2026 21:05:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/writeup/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Malware</title>
+      <link>https://www.policytopackets.com/tags/malware/</link>
+      <pubDate>Mon, 16 Feb 2026 19:58:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/malware/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Phishing</title>
+      <link>https://www.policytopackets.com/tags/phishing/</link>
+      <pubDate>Mon, 16 Feb 2026 19:58:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/phishing/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Talos_Intelligence</title>
+      <link>https://www.policytopackets.com/tags/talos_intelligence/</link>
+      <pubDate>Mon, 16 Feb 2026 19:58:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/talos_intelligence/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>True_Positive</title>
+      <link>https://www.policytopackets.com/tags/true_positive/</link>
+      <pubDate>Mon, 16 Feb 2026 19:58:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/true_positive/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>VirusTotal</title>
+      <link>https://www.policytopackets.com/tags/virustotal/</link>
+      <pubDate>Mon, 16 Feb 2026 19:58:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/virustotal/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Challenge</title>
@@ -52,31 +152,11 @@
     </item>
     
     <item>
-      <title>Writeup</title>
-      <link>https://www.policytopackets.com/tags/writeup/</link>
-      <pubDate>Sat, 14 Feb 2026 22:48:00 +0000</pubDate>
-      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://www.policytopackets.com/tags/writeup/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
       <title>Hard</title>
       <link>https://www.policytopackets.com/tags/hard/</link>
       <pubDate>Sat, 14 Feb 2026 21:07:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
       <guid>https://www.policytopackets.com/tags/hard/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Malware</title>
-      <link>https://www.policytopackets.com/tags/malware/</link>
-      <pubDate>Sat, 14 Feb 2026 21:07:00 +0000</pubDate>
-      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://www.policytopackets.com/tags/malware/</guid>
       <description></description>
       
     </item>
@@ -147,16 +227,6 @@
       <pubDate>Sat, 14 Feb 2026 00:39:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
       <guid>https://www.policytopackets.com/tags/xlmmacrodeobfuscator/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>VirusTotal</title>
-      <link>https://www.policytopackets.com/tags/virustotal/</link>
-      <pubDate>Sat, 14 Feb 2026 00:15:00 +0000</pubDate>
-      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://www.policytopackets.com/tags/virustotal/</guid>
       <description></description>
       
     </item>
@@ -262,16 +332,6 @@
     </item>
     
     <item>
-      <title>False_Positive</title>
-      <link>https://www.policytopackets.com/tags/false_positive/</link>
-      <pubDate>Thu, 12 Feb 2026 15:52:00 +0000</pubDate>
-      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://www.policytopackets.com/tags/false_positive/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
       <title>Hybrid-Analysis</title>
       <link>https://www.policytopackets.com/tags/hybrid-analysis/</link>
       <pubDate>Thu, 12 Feb 2026 15:52:00 +0000</pubDate>
@@ -282,41 +342,21 @@
     </item>
     
     <item>
-      <title>SIEM</title>
-      <link>https://www.policytopackets.com/tags/siem/</link>
+      <title>Type_Malware</title>
+      <link>https://www.policytopackets.com/tags/type_malware/</link>
       <pubDate>Thu, 12 Feb 2026 15:52:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://www.policytopackets.com/tags/siem/</guid>
+      <guid>https://www.policytopackets.com/tags/type_malware/</guid>
       <description></description>
       
     </item>
     
     <item>
-      <title>SOC</title>
-      <link>https://www.policytopackets.com/tags/soc/</link>
-      <pubDate>Thu, 12 Feb 2026 15:52:00 +0000</pubDate>
+      <title>Type_Proxy</title>
+      <link>https://www.policytopackets.com/tags/type_proxy/</link>
+      <pubDate>Wed, 11 Feb 2026 11:02:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://www.policytopackets.com/tags/soc/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Phishing</title>
-      <link>https://www.policytopackets.com/tags/phishing/</link>
-      <pubDate>Thu, 12 Feb 2026 14:53:00 +0000</pubDate>
-      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://www.policytopackets.com/tags/phishing/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>True_Positive</title>
-      <link>https://www.policytopackets.com/tags/true_positive/</link>
-      <pubDate>Thu, 12 Feb 2026 14:53:00 +0000</pubDate>
-      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://www.policytopackets.com/tags/true_positive/</guid>
+      <guid>https://www.policytopackets.com/tags/type_proxy/</guid>
       <description></description>
       
     </item>

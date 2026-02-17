@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Talos_Intelligence on Policy to Packets</title>
+    <link>https://www.policytopackets.com/tags/talos_intelligence/</link>
+    <description>Recent content in Talos_Intelligence on Policy to Packets</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>reedveggleston@gmail.com (Reed Eggleston)</managingEditor>
+    <webMaster>reedveggleston@gmail.com (Reed Eggleston)</webMaster>
+    <copyright>© 2026 Reed Eggleston</copyright>
+    <lastBuildDate>Mon, 16 Feb 2026 19:58:00 +0000</lastBuildDate><atom:link href="https://www.policytopackets.com/tags/talos_intelligence/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>[Writeup] LetsDefend - SOC114 - Malicious Attachment Detected - Phishing Alert - EventID 45</title>
+      <link>https://www.policytopackets.com/writeups/letsdefend/soc/114_45/</link>
+      <pubDate>Mon, 16 Feb 2026 19:58:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/soc/114_45/</guid>
+      <description>Step-by-step LetsDefend SOC114 alert writeup investigating a malicious email attachment (EventID 45), validating malware in VirusTotal, identifying C2 communication in logs, deleting the phishing email, and initiating endpoint containment from a SOC analyst perspective.</description>
+      
+    </item>
+    
+    <item>
+      <title>[Writeup] LetsDefend - SOC146 - Phishing Mail Detected - Excel 4.0 Macros - EventID 93</title>
+      <link>https://www.policytopackets.com/writeups/letsdefend/soc/146_93/</link>
+      <pubDate>Mon, 16 Feb 2026 17:58:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/soc/146_93/</guid>
+      <description>Step-by-step LetsDefend SOC146 alert writeup investigating a malware detection (EventID 93), analyzing a phishing email with malicious Excel attachment, validating indicators in VirusTotal, confirming C2 communication, and initiating endpoint containment from a SOC analyst perspective.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

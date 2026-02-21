@@ -17,7 +17,7 @@
       <pubDate>Sat, 14 Feb 2026 18:22:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
       <guid>https://www.policytopackets.com/writeups/hackthebox/challenges/onlyhacks/</guid>
-      <description>Step-by-step HackTheBox “OnlyHacks” challenge writeup demonstrating cross-site scripting (XSS) exploitation, session cookie theft, and practical web application enumeration in a Very Easy web challenge.</description>
+      <description>Demonstrating cross-site scripting (XSS) exploitation, session cookie theft, and practical web application enumeration in a Very Easy web challenge.</description>
       
     </item>
     
@@ -27,7 +27,7 @@
       <pubDate>Thu, 12 Feb 2026 21:20:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
       <guid>https://www.policytopackets.com/writeups/hackthebox/challenges/slippy/</guid>
-      <description>Step-by-step HackTheBox “Slippy” challenge writeup demonstrating Zip Slip exploitation, Jinja2 SSTI abuse, and Flask-based web application compromise within a Docker environment.</description>
+      <description>Demonstrating Zip Slip exploitation, Jinja2 SSTI abuse, and Flask-based web application compromise within a Docker environment.</description>
       
     </item>
     

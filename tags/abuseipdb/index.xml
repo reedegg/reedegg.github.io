@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AbuseIPDB on Policy to Packets</title>
+    <link>https://www.policytopackets.com/tags/abuseipdb/</link>
+    <description>Recent content in AbuseIPDB on Policy to Packets</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>reedveggleston@gmail.com (Reed Eggleston)</managingEditor>
+    <webMaster>reedveggleston@gmail.com (Reed Eggleston)</webMaster>
+    <copyright>© 2026 Reed Eggleston</copyright>
+    <lastBuildDate>Fri, 20 Feb 2026 15:22:00 +0000</lastBuildDate><atom:link href="https://www.policytopackets.com/tags/abuseipdb/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>(Writeup) LetsDefend EventID: 86 - [SOC141 - Phishing URL Detected]</title>
+      <link>https://www.policytopackets.com/writeups/letsdefend/soc/141_86/</link>
+      <pubDate>Fri, 20 Feb 2026 15:22:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/soc/141_86/</guid>
+      <description>Investigating a phishing URL alert after an endpoint connected to a malicious domain, validating reputation across multiple threat intelligence sources, identifying anomalous EDR logging, and initiating containment due to potential compromise.</description>
+      
+    </item>
+    
+    <item>
+      <title>(Writeup) LetsDefend EventID: 82 - [SOC140 - Phishing Mail Detected - Suspicious Task Scheduler]</title>
+      <link>https://www.policytopackets.com/writeups/letsdefend/soc/140_82/</link>
+      <pubDate>Fri, 20 Feb 2026 11:39:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/soc/140_82/</guid>
+      <description>Investigating a blocked phishing email with a malicious password-protected attachment, validating indicators through VirusTotal, Talos Intelligence, AbuseIPDB, and Hybrid Analysis, and confirming a true positive without endpoint impact.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

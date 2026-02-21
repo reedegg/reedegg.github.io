@@ -15,13 +15,13 @@
 
   
   
-    <title>[Writeup] LetsDefend - SOC146 - Phishing Mail Detected - Excel 4.0 Macros - EventID 93 &middot; Policy to Packets</title>
-    <meta name="title" content="[Writeup] LetsDefend - SOC146 - Phishing Mail Detected - Excel 4.0 Macros - EventID 93 &middot; Policy to Packets">
+    <title>(Writeup) LetsDefend EventID: 93 - [SOC146 - Phishing Mail Detected - Excel 4.0 Macros] &middot; Policy to Packets</title>
+    <meta name="title" content="(Writeup) LetsDefend EventID: 93 - [SOC146 - Phishing Mail Detected - Excel 4.0 Macros] &middot; Policy to Packets">
   
 
   
   
-    <meta name="description" content="Step-by-step LetsDefend SOC146 alert writeup investigating a malware detection (EventID 93), analyzing a phishing email with malicious Excel attachment, validating indicators in VirusTotal, confirming C2 communication, and initiating endpoint containment from a SOC analyst perspective.">
+    <meta name="description" content="Investigating a malware detection alert, analyzing a phishing email with malicious Excel attachment, validating indicators in VirusTotal, confirming C2 communication, and initiating endpoint containment.">
   
   
     <meta name="keywords" content="Writeup,VirusTotal,SOC,SIEM,True_Positive,Malware,Talos_Intelligence,Phishing,Type_Exchange,">
@@ -58,7 +58,7 @@
   
   <meta property="og:url" content="https://www.policytopackets.com/writeups/letsdefend/soc/146_93/">
   <meta property="og:site_name" content="Policy to Packets">
-  <meta property="og:title" content="[Writeup] LetsDefend - SOC146 - Phishing Mail Detected - Excel 4.0 Macros - EventID 93">
+  <meta property="og:title" content="(Writeup) LetsDefend EventID: 93 - [SOC146 - Phishing Mail Detected - Excel 4.0 Macros]">
   <meta property="og:description" content="Detailed LetsDefend SOC146 malware detection writeup covering phishing email analysis, SMTP reputation review via Talos Intelligence, malicious XLS attachment validation in VirusTotal, C2 IP identification, SIEM log correlation, and endpoint containment. Practical SOC-focused true positive investigation demonstrating structured phishing-to-infection response workflow.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
@@ -74,7 +74,7 @@
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="[Writeup] LetsDefend - SOC146 - Phishing Mail Detected - Excel 4.0 Macros - EventID 93">
+  <meta name="twitter:title" content="(Writeup) LetsDefend EventID: 93 - [SOC146 - Phishing Mail Detected - Excel 4.0 Macros]">
   <meta name="twitter:description" content="Detailed LetsDefend SOC146 malware detection writeup covering phishing email analysis, SMTP reputation review via Talos Intelligence, malicious XLS attachment validation in VirusTotal, C2 IP identification, SIEM log correlation, and endpoint containment. Practical SOC-focused true positive investigation demonstrating structured phishing-to-infection response workflow.">
 
   
@@ -233,8 +233,8 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Writeups",
-    "name": "[Writeup] LetsDefend - SOC146 - Phishing Mail Detected - Excel 4.0 Macros - EventID 93",
-    "headline": "[Writeup] LetsDefend - SOC146 - Phishing Mail Detected - Excel 4.0 Macros - EventID 93",
+    "name": "(Writeup) LetsDefend EventID: 93 - [SOC146 - Phishing Mail Detected - Excel 4.0 Macros]",
+    "headline": "(Writeup) LetsDefend EventID: 93 - [SOC146 - Phishing Mail Detected - Excel 4.0 Macros]",
     "description": "Detailed LetsDefend SOC146 malware detection writeup covering phishing email analysis, SMTP reputation review via Talos Intelligence, malicious XLS attachment validation in VirusTotal, C2 IP identification, SIEM log correlation, and endpoint containment. Practical SOC-focused true positive investigation demonstrating structured phishing-to-infection response workflow.",
     "inLanguage": "en",
     "url" : "https://www.policytopackets.com/writeups/letsdefend/soc/146_93/",
@@ -598,7 +598,7 @@
   
   <li class="hidden"> 
     <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/writeups/letsdefend/soc/146_93/"
-      >[Writeup] LetsDefend - SOC146 - Phishing Mail Detected - Excel 4.0 Macros - EventID 93</a
+      >(Writeup) LetsDefend EventID: 93 - [SOC146 - Phishing Mail Detected - Excel 4.0 Macros]</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -607,7 +607,7 @@
 
       
       <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral"> 
-        [Writeup] LetsDefend - SOC146 - Phishing Mail Detected - Excel 4.0 Macros - EventID 93
+        (Writeup) LetsDefend EventID: 93 - [SOC146 - Phishing Mail Detected - Excel 4.0 Macros]
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -825,7 +825,11 @@
         <li><a href="#talos-intelligence">Talos Intelligence:</a></li>
         <li><a href="#playbook">Playbook:</a>
           <ul>
-            <li><a href="#email-security">Email Security:</a></li>
+            <li><a href="#email-security">Email Security:</a>
+              <ul>
+                <li><a href="#virustotal">VirusTotal:</a></li>
+              </ul>
+            </li>
             <li><a href="#log-management">Log Management:</a></li>
             <li><a href="#endpoint-security">Endpoint Security:</a></li>
             <li><a href="#clean-up">Clean Up:</a></li>
@@ -853,7 +857,11 @@
         <li><a href="#talos-intelligence">Talos Intelligence:</a></li>
         <li><a href="#playbook">Playbook:</a>
           <ul>
-            <li><a href="#email-security">Email Security:</a></li>
+            <li><a href="#email-security">Email Security:</a>
+              <ul>
+                <li><a href="#virustotal">VirusTotal:</a></li>
+              </ul>
+            </li>
             <li><a href="#log-management">Log Management:</a></li>
             <li><a href="#endpoint-security">Endpoint Security:</a></li>
             <li><a href="#clean-up">Clean Up:</a></li>
@@ -1488,7 +1496,7 @@ If I could add more artifacts, I would. I thought it would be best to leave the 
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
               href="/writeups/letsdefend/soc/104_84/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;[Writeup] LetsDefend - SOC104 - Malware Detected - EventID 84
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;(Writeup) LetsDefend EventID: 84 - [SOC104 - Malware Detected]
               </span>
             </a>
             
@@ -1506,7 +1514,7 @@ If I could add more artifacts, I would. I thought it would be best to leave the 
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
               href="/writeups/letsdefend/soc/114_45/">
               <span class="leading-6">
-                [Writeup] LetsDefend - SOC114 - Malicious Attachment Detected - Phishing Alert - EventID 45&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                (Writeup) LetsDefend EventID: 45 - [SOC114 - Malicious Attachment Detected - Phishing Alert]&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             

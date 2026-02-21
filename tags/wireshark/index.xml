@@ -12,22 +12,22 @@
     <lastBuildDate>Sat, 14 Feb 2026 22:48:00 +0000</lastBuildDate><atom:link href="https://www.policytopackets.com/tags/wireshark/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>[Writeup] LetsDefend - Challenge - Shellshock Attack</title>
+      <title>(Writeup) LetsDefend Challenge - Shellshock Attack</title>
       <link>https://www.policytopackets.com/writeups/letsdefend/challenges/shellshock_attack/</link>
       <pubDate>Sat, 14 Feb 2026 22:48:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
       <guid>https://www.policytopackets.com/writeups/letsdefend/challenges/shellshock_attack/</guid>
-      <description>Step-by-step LetsDefend challenge writeup analyzing Shellshock attack activity in a PCAP file using Wireshark, identifying the target server details and the injected command from a SOC analyst perspective.</description>
+      <description>Analyzing Shellshock attack activity in a PCAP file using Wireshark, identifying the target server details and the injected command.</description>
       
     </item>
     
     <item>
-      <title>[Writeup] LetsDefend - Challenge - Port Scan Activity</title>
+      <title>(Writeup) LetsDefend Challenge - Port Scan Activity</title>
       <link>https://www.policytopackets.com/writeups/letsdefend/challenges/port_scan_activity/</link>
       <pubDate>Sat, 14 Feb 2026 22:10:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
       <guid>https://www.policytopackets.com/writeups/letsdefend/challenges/port_scan_activity/</guid>
-      <description>Step-by-step LetsDefend challenge writeup analyzing port scan activity in a PCAP file using Wireshark, identifying the scanning host, discovered systems, and network indicators from a SOC analyst perspective.</description>
+      <description>Analyzing port scan activity in a PCAP file using Wireshark, identifying the scanning host, discovered systems, and network indicators.</description>
       
     </item>
     

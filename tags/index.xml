@@ -9,7 +9,157 @@
     <managingEditor>reedveggleston@gmail.com (Reed Eggleston)</managingEditor>
     <webMaster>reedveggleston@gmail.com (Reed Eggleston)</webMaster>
     <copyright>© 2026 Reed Eggleston</copyright>
-    <lastBuildDate>Fri, 20 Feb 2026 17:45:00 +0000</lastBuildDate><atom:link href="https://www.policytopackets.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 21 Feb 2026 23:46:00 +0000</lastBuildDate><atom:link href="https://www.policytopackets.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>AbuseIPDB</title>
+      <link>https://www.policytopackets.com/tags/abuseipdb/</link>
+      <pubDate>Sat, 21 Feb 2026 23:46:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/abuseipdb/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Command_Injection</title>
+      <link>https://www.policytopackets.com/tags/command_injection/</link>
+      <pubDate>Sat, 21 Feb 2026 23:46:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/command_injection/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>HTTP</title>
+      <link>https://www.policytopackets.com/tags/http/</link>
+      <pubDate>Sat, 21 Feb 2026 23:46:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/http/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>SIEM</title>
+      <link>https://www.policytopackets.com/tags/siem/</link>
+      <pubDate>Sat, 21 Feb 2026 23:46:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/siem/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>SOC</title>
+      <link>https://www.policytopackets.com/tags/soc/</link>
+      <pubDate>Sat, 21 Feb 2026 23:46:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/soc/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Talos_Intelligence</title>
+      <link>https://www.policytopackets.com/tags/talos_intelligence/</link>
+      <pubDate>Sat, 21 Feb 2026 23:46:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/talos_intelligence/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>True_Positive</title>
+      <link>https://www.policytopackets.com/tags/true_positive/</link>
+      <pubDate>Sat, 21 Feb 2026 23:46:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/true_positive/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Type_Web_Attack</title>
+      <link>https://www.policytopackets.com/tags/type_web_attack/</link>
+      <pubDate>Sat, 21 Feb 2026 23:46:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/type_web_attack/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>VirusTotal</title>
+      <link>https://www.policytopackets.com/tags/virustotal/</link>
+      <pubDate>Sat, 21 Feb 2026 23:46:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/virustotal/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Web_Shell</title>
+      <link>https://www.policytopackets.com/tags/web_shell/</link>
+      <pubDate>Sat, 21 Feb 2026 23:46:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/web_shell/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Writeup</title>
+      <link>https://www.policytopackets.com/tags/writeup/</link>
+      <pubDate>Sat, 21 Feb 2026 23:46:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/writeup/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>False_Positive</title>
+      <link>https://www.policytopackets.com/tags/false_positive/</link>
+      <pubDate>Sat, 21 Feb 2026 23:01:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/false_positive/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>XSS</title>
+      <link>https://www.policytopackets.com/tags/xss/</link>
+      <pubDate>Sat, 21 Feb 2026 21:18:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/xss/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>CyberChef</title>
+      <link>https://www.policytopackets.com/tags/cyberchef/</link>
+      <pubDate>Sat, 21 Feb 2026 18:15:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/cyberchef/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>SQLi</title>
+      <link>https://www.policytopackets.com/tags/sqli/</link>
+      <pubDate>Sat, 21 Feb 2026 18:15:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/sqli/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Beginner</title>
@@ -62,81 +212,11 @@
     </item>
     
     <item>
-      <title>VirusTotal</title>
-      <link>https://www.policytopackets.com/tags/virustotal/</link>
-      <pubDate>Fri, 20 Feb 2026 17:45:00 +0000</pubDate>
-      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://www.policytopackets.com/tags/virustotal/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Writeup</title>
-      <link>https://www.policytopackets.com/tags/writeup/</link>
-      <pubDate>Fri, 20 Feb 2026 17:45:00 +0000</pubDate>
-      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://www.policytopackets.com/tags/writeup/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>AbuseIPDB</title>
-      <link>https://www.policytopackets.com/tags/abuseipdb/</link>
-      <pubDate>Fri, 20 Feb 2026 15:22:00 +0000</pubDate>
-      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://www.policytopackets.com/tags/abuseipdb/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
       <title>Browserling</title>
       <link>https://www.policytopackets.com/tags/browserling/</link>
       <pubDate>Fri, 20 Feb 2026 15:22:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
       <guid>https://www.policytopackets.com/tags/browserling/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>SIEM</title>
-      <link>https://www.policytopackets.com/tags/siem/</link>
-      <pubDate>Fri, 20 Feb 2026 15:22:00 +0000</pubDate>
-      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://www.policytopackets.com/tags/siem/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>SOC</title>
-      <link>https://www.policytopackets.com/tags/soc/</link>
-      <pubDate>Fri, 20 Feb 2026 15:22:00 +0000</pubDate>
-      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://www.policytopackets.com/tags/soc/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Talos_Intelligence</title>
-      <link>https://www.policytopackets.com/tags/talos_intelligence/</link>
-      <pubDate>Fri, 20 Feb 2026 15:22:00 +0000</pubDate>
-      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://www.policytopackets.com/tags/talos_intelligence/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>True_Positive</title>
-      <link>https://www.policytopackets.com/tags/true_positive/</link>
-      <pubDate>Fri, 20 Feb 2026 15:22:00 +0000</pubDate>
-      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://www.policytopackets.com/tags/true_positive/</guid>
       <description></description>
       
     </item>
@@ -167,16 +247,6 @@
       <pubDate>Fri, 20 Feb 2026 11:39:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
       <guid>https://www.policytopackets.com/tags/type_exchange/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>False_Positive</title>
-      <link>https://www.policytopackets.com/tags/false_positive/</link>
-      <pubDate>Mon, 16 Feb 2026 21:05:00 +0000</pubDate>
-      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://www.policytopackets.com/tags/false_positive/</guid>
       <description></description>
       
     </item>
@@ -237,16 +307,6 @@
       <pubDate>Sat, 14 Feb 2026 18:22:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
       <guid>https://www.policytopackets.com/tags/very_easy/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>XSS</title>
-      <link>https://www.policytopackets.com/tags/xss/</link>
-      <pubDate>Sat, 14 Feb 2026 18:22:00 +0000</pubDate>
-      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://www.policytopackets.com/tags/xss/</guid>
       <description></description>
       
     </item>

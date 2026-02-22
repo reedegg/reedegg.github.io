@@ -22,6 +22,26 @@
     </item>
     
     <item>
+      <title>(Writeup) LetsDefend EventID: 86 - [SOC141 - Phishing URL Detected]</title>
+      <link>https://www.policytopackets.com/writeups/letsdefend/soc/141_86/</link>
+      <pubDate>Fri, 20 Feb 2026 15:22:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/soc/141_86/</guid>
+      <description>Investigating a phishing URL alert after an endpoint connected to a malicious domain, validating reputation across multiple threat intelligence sources, identifying anomalous EDR logging, and initiating containment due to potential compromise.</description>
+      
+    </item>
+    
+    <item>
+      <title>(Writeup) LetsDefend EventID: 82 - [SOC140 - Phishing Mail Detected - Suspicious Task Scheduler]</title>
+      <link>https://www.policytopackets.com/writeups/letsdefend/soc/140_82/</link>
+      <pubDate>Fri, 20 Feb 2026 11:39:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/soc/140_82/</guid>
+      <description>Investigating a blocked phishing email with a malicious password-protected attachment, validating indicators through VirusTotal, Talos Intelligence, AbuseIPDB, and Hybrid Analysis, and confirming a true positive without endpoint impact.</description>
+      
+    </item>
+    
+    <item>
       <title>(Writeup) LetsDefend EventID: 45 - [SOC114 - Malicious Attachment Detected - Phishing Alert]</title>
       <link>https://www.policytopackets.com/writeups/letsdefend/soc/114_45/</link>
       <pubDate>Mon, 16 Feb 2026 19:58:00 +0000</pubDate>

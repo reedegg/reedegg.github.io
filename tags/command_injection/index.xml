@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Command_Injection on Policy to Packets</title>
+    <link>https://www.policytopackets.com/tags/command_injection/</link>
+    <description>Recent content in Command_Injection on Policy to Packets</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>reedveggleston@gmail.com (Reed Eggleston)</managingEditor>
+    <webMaster>reedveggleston@gmail.com (Reed Eggleston)</webMaster>
+    <copyright>© 2026 Reed Eggleston</copyright>
+    <lastBuildDate>Sat, 21 Feb 2026 23:46:00 +0000</lastBuildDate><atom:link href="https://www.policytopackets.com/tags/command_injection/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>(Writeup) LetsDefend EventID: 118 - [SOC168 - Whoami Command Detected in Request Body]</title>
+      <link>https://www.policytopackets.com/writeups/letsdefend/soc/168_118/</link>
+      <pubDate>Sat, 21 Feb 2026 23:46:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/soc/168_118/</guid>
+      <description>Investigating a command injection alert after POST requests containing system commands targeted a web endpoint, validating attacker IP reputation and analyzing HTTP response behavior, confirming successful command execution through response size variation, and initiating containment and escalation due to a confirmed web shell.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

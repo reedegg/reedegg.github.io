@@ -9,7 +9,17 @@
     <managingEditor>reedveggleston@gmail.com (Reed Eggleston)</managingEditor>
     <webMaster>reedveggleston@gmail.com (Reed Eggleston)</webMaster>
     <copyright>© 2026 Reed Eggleston</copyright>
-    <lastBuildDate>Mon, 16 Feb 2026 21:05:00 +0000</lastBuildDate><atom:link href="https://www.policytopackets.com/tags/false_positive/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 21 Feb 2026 23:01:00 +0000</lastBuildDate><atom:link href="https://www.policytopackets.com/tags/false_positive/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>(Writeup) LetsDefend EventID: 117 - [SOC167 - LS Command Detected in Requested URL]</title>
+      <link>https://www.policytopackets.com/writeups/letsdefend/soc/167_117/</link>
+      <pubDate>Sat, 21 Feb 2026 23:01:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/soc/167_117/</guid>
+      <description>Investigating a command-injection alert after a URL triggered on the string “ls,” reviewing SIEM logs and threat intelligence data, and determining the activity was normal user browsing traffic that resulted in a false positive.</description>
+      
+    </item>
     
     <item>
       <title>(Writeup) LetsDefend EventID: 52 - [SOC120 - Phishing Mail Detected - Internal to Internal]</title>

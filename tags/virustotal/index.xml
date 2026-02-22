@@ -9,7 +9,47 @@
     <managingEditor>reedveggleston@gmail.com (Reed Eggleston)</managingEditor>
     <webMaster>reedveggleston@gmail.com (Reed Eggleston)</webMaster>
     <copyright>© 2026 Reed Eggleston</copyright>
-    <lastBuildDate>Fri, 20 Feb 2026 17:45:00 +0000</lastBuildDate><atom:link href="https://www.policytopackets.com/tags/virustotal/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 21 Feb 2026 23:46:00 +0000</lastBuildDate><atom:link href="https://www.policytopackets.com/tags/virustotal/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>(Writeup) LetsDefend EventID: 118 - [SOC168 - Whoami Command Detected in Request Body]</title>
+      <link>https://www.policytopackets.com/writeups/letsdefend/soc/168_118/</link>
+      <pubDate>Sat, 21 Feb 2026 23:46:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/soc/168_118/</guid>
+      <description>Investigating a command injection alert after POST requests containing system commands targeted a web endpoint, validating attacker IP reputation and analyzing HTTP response behavior, confirming successful command execution through response size variation, and initiating containment and escalation due to a confirmed web shell.</description>
+      
+    </item>
+    
+    <item>
+      <title>(Writeup) LetsDefend EventID: 117 - [SOC167 - LS Command Detected in Requested URL]</title>
+      <link>https://www.policytopackets.com/writeups/letsdefend/soc/167_117/</link>
+      <pubDate>Sat, 21 Feb 2026 23:01:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/soc/167_117/</guid>
+      <description>Investigating a command-injection alert after a URL triggered on the string “ls,” reviewing SIEM logs and threat intelligence data, and determining the activity was normal user browsing traffic that resulted in a false positive.</description>
+      
+    </item>
+    
+    <item>
+      <title>(Writeup) LetsDefend EventID: 116 - [SOC166 - Javascript Code Detected in Requested URL]</title>
+      <link>https://www.policytopackets.com/writeups/letsdefend/soc/166_116/</link>
+      <pubDate>Sat, 21 Feb 2026 21:18:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/soc/166_116/</guid>
+      <description>Investigating an XSS alert after multiple JavaScript payloads were sent to a web application, validating the attacker IP reputation and reviewing HTTP response behavior, and confirming the attempts failed based on consistent 302 redirects and clean endpoint verification.</description>
+      
+    </item>
+    
+    <item>
+      <title>(Writeup) LetsDefend EventID: 115 - [SOC165 - Possible SQL Injection Payload Detected]</title>
+      <link>https://www.policytopackets.com/writeups/letsdefend/soc/165_115/</link>
+      <pubDate>Sat, 21 Feb 2026 18:15:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/soc/165_115/</guid>
+      <description>Investigating a SQL injection alert after repeated crafted payloads targeted a web server, decoding and validating the requests through log analysis, reviewing source IP reputation across multiple threat intelligence sources, and confirming the attack was unsuccessful based on server responses and endpoint verification.</description>
+      
+    </item>
     
     <item>
       <title>(Writeup) LetsDefend Challenge - Phishing Email</title>

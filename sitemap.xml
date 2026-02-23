@@ -3,25 +3,61 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://www.policytopackets.com/writeups/letsdefend/soc/169_119/</loc>
-    <lastmod>2026-02-22T21:48:00+00:00</lastmod>
+    <loc>https://www.policytopackets.com/writeups/letsdefend/challenges/disclose_the_agent/</loc>
+    <lastmod>2026-02-23T15:48:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.policytopackets.com/writeups/letsdefend/challenges/</loc>
+    <lastmod>2026-02-23T15:48:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.policytopackets.com/writeups/letsdefend/</loc>
-    <lastmod>2026-02-22T21:48:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.policytopackets.com/writeups/letsdefend/soc/</loc>
-    <lastmod>2026-02-22T21:48:00+00:00</lastmod>
+    <lastmod>2026-02-23T15:48:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.policytopackets.com/writeups/</loc>
+    <lastmod>2026-02-23T15:48:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.policytopackets.com/writeups/letsdefend/soc/138_77/</loc>
+    <lastmod>2026-02-23T13:36:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.policytopackets.com/writeups/letsdefend/soc/</loc>
+    <lastmod>2026-02-23T13:36:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.policytopackets.com/writeups/letsdefend/challenges/investigate_web_attack/</loc>
+    <lastmod>2026-02-23T12:14:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.policytopackets.com/writeups/letsdefend/challenges/http_basic_auth./</loc>
+    <lastmod>2026-02-23T11:41:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.policytopackets.com/writeups/letsdefend/soc/170_120/</loc>
+    <lastmod>2026-02-23T11:10:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.policytopackets.com/writeups/letsdefend/soc/169_119/</loc>
     <lastmod>2026-02-22T21:48:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -52,12 +88,6 @@
   </url>
   <url>
     <loc>https://www.policytopackets.com/writeups/letsdefend/challenges/phishing_email/</loc>
-    <lastmod>2026-02-20T17:45:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.policytopackets.com/writeups/letsdefend/challenges/</loc>
     <lastmod>2026-02-20T17:45:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>

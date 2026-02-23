@@ -15,20 +15,20 @@
 
   
   
-    <title>(Writeup) LetsDefend EventID: 118 - [SOC168 - Whoami Command Detected in Request Body] &middot; Policy to Packets</title>
-    <meta name="title" content="(Writeup) LetsDefend EventID: 118 - [SOC168 - Whoami Command Detected in Request Body] &middot; Policy to Packets">
+    <title>(Writeup) LetsDefend EventID: 119 - [SOC169 - Possible IDOR Attack Detected] &middot; Policy to Packets</title>
+    <meta name="title" content="(Writeup) LetsDefend EventID: 119 - [SOC169 - Possible IDOR Attack Detected] &middot; Policy to Packets">
   
 
   
   
-    <meta name="description" content="Investigating a command injection alert after POST requests containing system commands targeted a web endpoint, validating attacker IP reputation and analyzing HTTP response behavior, confirming successful command execution through response size variation, and initiating containment and escalation due to a confirmed web shell.">
+    <meta name="description" content="Investigating an IDOR alert after repeated POST requests incremented a user ID parameter, reviewing HTTP logs and response behavior, and confirming successful data exposure based on varying response sizes and consistent 200 status codes before escalating the case.">
   
   
-    <meta name="keywords" content="Writeup,SOC,SIEM,Type_Web_Attack,Web_Shell,Command_Injection,VirusTotal,Talos_Intelligence,AbuseIPDB,HTTP,True_Positive,">
+    <meta name="keywords" content="Writeup,SOC,SIEM,IDOR,HTTP,Type_Web_Attack,True_Positive,">
   
   
   
-  <link rel="canonical" href="https://www.policytopackets.com/writeups/letsdefend/soc/168_118/">
+  <link rel="canonical" href="https://www.policytopackets.com/writeups/letsdefend/soc/169_119/">
   
 
   
@@ -56,26 +56,26 @@
   
 
   
-  <meta property="og:url" content="https://www.policytopackets.com/writeups/letsdefend/soc/168_118/">
+  <meta property="og:url" content="https://www.policytopackets.com/writeups/letsdefend/soc/169_119/">
   <meta property="og:site_name" content="Policy to Packets">
-  <meta property="og:title" content="(Writeup) LetsDefend EventID: 118 - [SOC168 - Whoami Command Detected in Request Body]">
-  <meta property="og:description" content="Detailed LetsDefend SOC168 investigation into a command injection attack leveraging a web shell exposed through a POST parameter. Covers SIEM HTTP log correlation, detection of command execution via response size variation, attacker IP reputation validation using VirusTotal, Talos Intelligence, and AbuseIPDB, and containment of a compromised web server. Practical example of identifying and responding to active web shell exploitation in a SOC environment.">
+  <meta property="og:title" content="(Writeup) LetsDefend EventID: 119 - [SOC169 - Possible IDOR Attack Detected]">
+  <meta property="og:description" content="Detailed LetsDefend SOC169 investigation into a possible Insecure Direct Object Reference (IDOR) attack targeting a web application endpoint. Covers SIEM HTTP log correlation, analysis of incrementing user_id parameters, validation of successful unauthorized data access through response size variation, and escalation of a confirmed web application vulnerability. Practical example of detecting and validating IDOR exploitation in a SOC environment.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="writeups">
-    <meta property="article:published_time" content="2026-02-21T23:46:00+00:00">
-    <meta property="article:modified_time" content="2026-02-21T23:46:00+00:00">
+    <meta property="article:published_time" content="2026-02-22T21:48:00+00:00">
+    <meta property="article:modified_time" content="2026-02-22T21:48:00+00:00">
     <meta property="article:tag" content="Writeup">
     <meta property="article:tag" content="SOC">
     <meta property="article:tag" content="SIEM">
+    <meta property="article:tag" content="IDOR">
+    <meta property="article:tag" content="HTTP">
     <meta property="article:tag" content="Type_Web_Attack">
-    <meta property="article:tag" content="Web_Shell">
-    <meta property="article:tag" content="Command_Injection">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="(Writeup) LetsDefend EventID: 118 - [SOC168 - Whoami Command Detected in Request Body]">
-  <meta name="twitter:description" content="Detailed LetsDefend SOC168 investigation into a command injection attack leveraging a web shell exposed through a POST parameter. Covers SIEM HTTP log correlation, detection of command execution via response size variation, attacker IP reputation validation using VirusTotal, Talos Intelligence, and AbuseIPDB, and containment of a compromised web server. Practical example of identifying and responding to active web shell exploitation in a SOC environment.">
+  <meta name="twitter:title" content="(Writeup) LetsDefend EventID: 119 - [SOC169 - Possible IDOR Attack Detected]">
+  <meta name="twitter:description" content="Detailed LetsDefend SOC169 investigation into a possible Insecure Direct Object Reference (IDOR) attack targeting a web application endpoint. Covers SIEM HTTP log correlation, analysis of incrementing user_id parameters, validation of successful unauthorized data access through response size variation, and escalation of a confirmed web application vulnerability. Practical example of detecting and validating IDOR exploitation in a SOC environment.">
 
   
   
@@ -233,25 +233,25 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Writeups",
-    "name": "(Writeup) LetsDefend EventID: 118 - [SOC168 - Whoami Command Detected in Request Body]",
-    "headline": "(Writeup) LetsDefend EventID: 118 - [SOC168 - Whoami Command Detected in Request Body]",
-    "description": "Detailed LetsDefend SOC168 investigation into a command injection attack leveraging a web shell exposed through a POST parameter. Covers SIEM HTTP log correlation, detection of command execution via response size variation, attacker IP reputation validation using VirusTotal, Talos Intelligence, and AbuseIPDB, and containment of a compromised web server. Practical example of identifying and responding to active web shell exploitation in a SOC environment.",
+    "name": "(Writeup) LetsDefend EventID: 119 - [SOC169 - Possible IDOR Attack Detected]",
+    "headline": "(Writeup) LetsDefend EventID: 119 - [SOC169 - Possible IDOR Attack Detected]",
+    "description": "Detailed LetsDefend SOC169 investigation into a possible Insecure Direct Object Reference (IDOR) attack targeting a web application endpoint. Covers SIEM HTTP log correlation, analysis of incrementing user_id parameters, validation of successful unauthorized data access through response size variation, and escalation of a confirmed web application vulnerability. Practical example of detecting and validating IDOR exploitation in a SOC environment.",
     "inLanguage": "en",
-    "url" : "https://www.policytopackets.com/writeups/letsdefend/soc/168_118/",
+    "url" : "https://www.policytopackets.com/writeups/letsdefend/soc/169_119/",
     "author" : {
       "@type": "Person",
       "name": "Reed Eggleston"
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-02-21T23:46:00\u002b00:00",
-    "datePublished": "2026-02-21T23:46:00\u002b00:00",
+    "dateCreated": "2026-02-22T21:48:00\u002b00:00",
+    "datePublished": "2026-02-22T21:48:00\u002b00:00",
     
-    "dateModified": "2026-02-21T23:46:00\u002b00:00",
+    "dateModified": "2026-02-22T21:48:00\u002b00:00",
     
-    "keywords": ["Writeup","SOC","SIEM","Type_Web_Attack","Web_Shell","Command_Injection","VirusTotal","Talos_Intelligence","AbuseIPDB","HTTP","True_Positive"],
+    "keywords": ["Writeup","SOC","SIEM","IDOR","HTTP","Type_Web_Attack","True_Positive"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "587"
+    "wordCount": "419"
   }]
   </script>
 
@@ -597,8 +597,8 @@
 
   
   <li class="hidden"> 
-    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/writeups/letsdefend/soc/168_118/"
-      >(Writeup) LetsDefend EventID: 118 - [SOC168 - Whoami Command Detected in Request Body]</a
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/writeups/letsdefend/soc/169_119/"
+      >(Writeup) LetsDefend EventID: 119 - [SOC169 - Possible IDOR Attack Detected]</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -607,7 +607,7 @@
 
       
       <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral"> 
-        (Writeup) LetsDefend EventID: 118 - [SOC168 - Whoami Command Detected in Request Body]
+        (Writeup) LetsDefend EventID: 119 - [SOC169 - Possible IDOR Attack Detected]
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -656,7 +656,7 @@
     
     
       
-  <time datetime="2026-02-21T23:46:00&#43;00:00">February 21 2026</time>
+  <time datetime="2026-02-22T21:48:00&#43;00:00">February 22 2026</time>
 
     
 
@@ -693,31 +693,21 @@
         
           
             
-              <a class="relative mt-[0.5rem] me-2" href="/tags/abuseipdb/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    AbuseIPDB
-  </span>
-</span>
-
-              </a>
-            
-              <a class="relative mt-[0.5rem] me-2" href="/tags/command_injection/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Command_Injection
-  </span>
-</span>
-
-              </a>
-            
               <a class="relative mt-[0.5rem] me-2" href="/tags/http/">
                 <span class="flex cursor-pointer">
   <span
     class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
     HTTP
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/idor/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    IDOR
   </span>
 </span>
 
@@ -743,16 +733,6 @@
 
               </a>
             
-              <a class="relative mt-[0.5rem] me-2" href="/tags/talos_intelligence/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Talos_Intelligence
-  </span>
-</span>
-
-              </a>
-            
               <a class="relative mt-[0.5rem] me-2" href="/tags/true_positive/">
                 <span class="flex cursor-pointer">
   <span
@@ -768,26 +748,6 @@
   <span
     class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
     Type_Web_Attack
-  </span>
-</span>
-
-              </a>
-            
-              <a class="relative mt-[0.5rem] me-2" href="/tags/virustotal/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    VirusTotal
-  </span>
-</span>
-
-              </a>
-            
-              <a class="relative mt-[0.5rem] me-2" href="/tags/web_shell/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Web_Shell
   </span>
 </span>
 
@@ -843,48 +803,38 @@
     <li><a href="#alert-details">Alert Details</a></li>
     <li><a href="#initial-triage">Initial Triage</a>
       <ul>
-        <li><a href="#actions">Actions:</a></li>
-        <li><a href="#thoughts">Thoughts:</a></li>
+        <li><a href="#actions">Actions</a></li>
+        <li><a href="#thoughts">Thoughts</a></li>
       </ul>
     </li>
     <li><a href="#analysis">Analysis</a>
       <ul>
-        <li><a href="#tools-used">Tools Used:</a></li>
-        <li><a href="#ip">IP:</a>
-          <ul>
-            <li><a href="#thoughts-1">Thoughts:</a></li>
-          </ul>
-        </li>
         <li><a href="#log-analysis">Log Analysis</a>
           <ul>
-            <li><a href="#thoughts-2">Thoughts:</a></li>
-            <li><a href="#action">Action:</a></li>
+            <li><a href="#thoughts-1">Thoughts</a></li>
           </ul>
         </li>
         <li><a href="#email">Email</a>
           <ul>
-            <li><a href="#thoughts-3">Thoughts:</a></li>
+            <li><a href="#thoughts-2">Thoughts</a></li>
           </ul>
         </li>
-        <li><a href="#endpoint-status">Endpoint Status</a></li>
-        <li><a href="#findings">Findings:</a></li>
-        <li><a href="#thoughts-4">Thoughts:</a></li>
       </ul>
     </li>
     <li><a href="#determination">Determination</a>
       <ul>
-        <li><a href="#verdict">Verdict:</a></li>
-        <li><a href="#reasoning">Reasoning:</a></li>
+        <li><a href="#verdict">Verdict</a></li>
+        <li><a href="#reasoning">Reasoning</a></li>
       </ul>
     </li>
     <li><a href="#playbook">Playbook</a>
       <ul>
-        <li><a href="#questions">Questions:</a></li>
-        <li><a href="#artifacts">Artifacts:</a></li>
-        <li><a href="#notes">Notes:</a></li>
+        <li><a href="#questions">Questions</a></li>
+        <li><a href="#artifacts">Artifacts</a></li>
+        <li><a href="#notes">Notes</a></li>
       </ul>
     </li>
-    <li><a href="#final-thoughts">Final Thoughts:</a></li>
+    <li><a href="#finishing-thoughts">Finishing Thoughts</a></li>
   </ul>
 </nav>
   </div>
@@ -902,48 +852,38 @@
     <li><a href="#alert-details">Alert Details</a></li>
     <li><a href="#initial-triage">Initial Triage</a>
       <ul>
-        <li><a href="#actions">Actions:</a></li>
-        <li><a href="#thoughts">Thoughts:</a></li>
+        <li><a href="#actions">Actions</a></li>
+        <li><a href="#thoughts">Thoughts</a></li>
       </ul>
     </li>
     <li><a href="#analysis">Analysis</a>
       <ul>
-        <li><a href="#tools-used">Tools Used:</a></li>
-        <li><a href="#ip">IP:</a>
-          <ul>
-            <li><a href="#thoughts-1">Thoughts:</a></li>
-          </ul>
-        </li>
         <li><a href="#log-analysis">Log Analysis</a>
           <ul>
-            <li><a href="#thoughts-2">Thoughts:</a></li>
-            <li><a href="#action">Action:</a></li>
+            <li><a href="#thoughts-1">Thoughts</a></li>
           </ul>
         </li>
         <li><a href="#email">Email</a>
           <ul>
-            <li><a href="#thoughts-3">Thoughts:</a></li>
+            <li><a href="#thoughts-2">Thoughts</a></li>
           </ul>
         </li>
-        <li><a href="#endpoint-status">Endpoint Status</a></li>
-        <li><a href="#findings">Findings:</a></li>
-        <li><a href="#thoughts-4">Thoughts:</a></li>
       </ul>
     </li>
     <li><a href="#determination">Determination</a>
       <ul>
-        <li><a href="#verdict">Verdict:</a></li>
-        <li><a href="#reasoning">Reasoning:</a></li>
+        <li><a href="#verdict">Verdict</a></li>
+        <li><a href="#reasoning">Reasoning</a></li>
       </ul>
     </li>
     <li><a href="#playbook">Playbook</a>
       <ul>
-        <li><a href="#questions">Questions:</a></li>
-        <li><a href="#artifacts">Artifacts:</a></li>
-        <li><a href="#notes">Notes:</a></li>
+        <li><a href="#questions">Questions</a></li>
+        <li><a href="#artifacts">Artifacts</a></li>
+        <li><a href="#notes">Notes</a></li>
       </ul>
     </li>
-    <li><a href="#final-thoughts">Final Thoughts:</a></li>
+    <li><a href="#finishing-thoughts">Finishing Thoughts</a></li>
   </ul>
 </nav>
   </div>
@@ -1073,7 +1013,7 @@
 </h2>
 <ul>
 <li>LetsDefend is a Blue Team Training platform.</li>
-<li>This writeup documents a SOC alert investigation involving command injection.</li>
+<li>This writeup documents a SOC alert investigation involving an insecure direct object reference (IDOR).</li>
 </ul>
 <hr>
 
@@ -1089,22 +1029,22 @@
 <table>
   <thead>
       <tr>
-          <th>Key</th>
+          <th>Key:</th>
           <th>Value</th>
       </tr>
   </thead>
   <tbody>
       <tr>
           <td>EventID:</td>
-          <td><code>118</code></td>
+          <td><code>119</code></td>
       </tr>
       <tr>
           <td>Event Time:</td>
-          <td><code>Feb, 28, 2022, 04:12 AM</code></td>
+          <td><code>Feb, 28, 2022, 10:48 PM</code></td>
       </tr>
       <tr>
           <td>Rule:</td>
-          <td><code>SOC168 - Whoami Command Detected in Request Body</code></td>
+          <td><code>SOC169 - Possible IDOR Attack Detected</code></td>
       </tr>
       <tr>
           <td>Level:</td>
@@ -1112,15 +1052,15 @@
       </tr>
       <tr>
           <td>Hostname:</td>
-          <td><code>WebServer1004</code></td>
+          <td><code>WebServer1005</code></td>
       </tr>
       <tr>
           <td>Destination IP Address:</td>
-          <td><code>172.16.17.16</code></td>
+          <td><code>172.16.17.15</code></td>
       </tr>
       <tr>
           <td>Source IP Address:</td>
-          <td><code>61.177.172.87</code></td>
+          <td><code>134.209.118.137</code></td>
       </tr>
       <tr>
           <td>HTTP Request Method:</td>
@@ -1128,15 +1068,15 @@
       </tr>
       <tr>
           <td>Requested URL:</td>
-          <td><code>https://172.16.17.16/video/</code></td>
+          <td><code>https://172.16.17.15/get_user_info/</code></td>
       </tr>
       <tr>
           <td>User-Agent:</td>
-          <td><code>Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)</code></td>
+          <td><code>Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.1.4322)</code></td>
       </tr>
       <tr>
           <td>Alert Trigger Reason:</td>
-          <td><code>Request Body Contains whoami string</code></td>
+          <td><code>consecutive requests to the same page</code></td>
       </tr>
       <tr>
           <td>Device Action:</td>
@@ -1156,7 +1096,7 @@
     
 </h2>
 
-<h3 class="relative group">Actions:
+<h3 class="relative group">Actions
     <div id="actions" class="anchor"></div>
     
     <span
@@ -1171,7 +1111,7 @@
 <li>Began analysis</li>
 </ul>
 
-<h3 class="relative group">Thoughts:
+<h3 class="relative group">Thoughts
     <div id="thoughts" class="anchor"></div>
     
     <span
@@ -1180,7 +1120,7 @@
     </span>
     
 </h3>
-<blockquote><p>&ldquo;A POST on <code>/video/</code> containing <code>whoami</code>? That&rsquo;s suspicious&hellip; Time to investigate!&rdquo;</p>
+<blockquote><p>&ldquo;Hmm, gotta check the SIEM logs first. I want to see the details of the HTTP requests.&rdquo;</p>
 </blockquote><hr>
 
 <h2 class="relative group">Analysis
@@ -1193,64 +1133,6 @@
     
 </h2>
 
-<h3 class="relative group">Tools Used:
-    <div id="tools-used" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#tools-used" aria-label="Anchor">#</a>
-    </span>
-    
-</h3>
-<ul>
-<li><a href="https://www.virustotal.com/gui/"  target="_blank" rel="noreferrer">VirusTotal</a></li>
-<li><a href="https://talosintelligence.com/"  target="_blank" rel="noreferrer">Talos Intelligence</a></li>
-<li><a href="https://www.abuseipdb.com/"  target="_blank" rel="noreferrer">AbuseIPDB</a></li>
-</ul>
-
-<h3 class="relative group">IP:
-    <div id="ip" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ip" aria-label="Anchor">#</a>
-    </span>
-    
-</h3>
-<table>
-  <thead>
-      <tr>
-          <th>Key</th>
-          <th>Value</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>VirusTotal:</td>
-          <td><a href="https://www.virustotal.com/gui/ip-address/61.177.172.87"  target="_blank" rel="noreferrer">3/93 Malicious</a></td>
-      </tr>
-      <tr>
-          <td>Talos Intelligence:</td>
-          <td><a href="https://talosintelligence.com/reputation_center/lookup?search=61.177.172.87"  target="_blank" rel="noreferrer">Neutral</a></td>
-      </tr>
-      <tr>
-          <td>AbuseIPDB:</td>
-          <td><a href="https://www.abuseipdb.com/check/61.177.172.87"  target="_blank" rel="noreferrer">86,782 Reports (Hacking)</a></td>
-      </tr>
-  </tbody>
-</table>
-
-<h4 class="relative group">Thoughts:
-    <div id="thoughts-1" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#thoughts-1" aria-label="Anchor">#</a>
-    </span>
-    
-</h4>
-<blockquote><p>&ldquo;That is an impressive amount of reports&hellip; Also, it&rsquo;s not good for the chance of it being a false positive.&rdquo;</p>
-</blockquote>
 <h3 class="relative group">Log Analysis
     <div id="log-analysis" class="anchor"></div>
     
@@ -1260,17 +1142,34 @@
     </span>
     
 </h3>
+<p>(Simplifying for writeup brevity)</p>
 <table>
   <thead>
       <tr>
-          <th>Key</th>
+          <th>Key:</th>
           <th>Value</th>
       </tr>
   </thead>
   <tbody>
       <tr>
+          <td>type:</td>
+          <td><code>Firewall</code></td>
+      </tr>
+      <tr>
+          <td>source_address:</td>
+          <td><code>134.209.118.137</code></td>
+      </tr>
+      <tr>
+          <td>destination_address:</td>
+          <td><code>172.16.17.15</code></td>
+      </tr>
+      <tr>
+          <td>destination_port:</td>
+          <td><code>443</code></td>
+      </tr>
+      <tr>
           <td>Request URL:</td>
-          <td><code>https://172.16.17.16/video/</code></td>
+          <td><code>https://172.16.17.15/get_user_info/</code></td>
       </tr>
       <tr>
           <td>Request Method:</td>
@@ -1279,44 +1178,20 @@
       <tr>
           <td>Device Action:</td>
           <td><code>Permitted</code></td>
-      </tr>
-      <tr>
-          <td>HTTP Response Size:</td>
-          <td><code>1021</code></td>
-      </tr>
-      <tr>
-          <td>HTTP Response Status:</td>
-          <td><code>200</code></td>
-      </tr>
-      <tr>
-          <td>POST Parameters:</td>
-          <td><code>?c=ls</code></td>
       </tr>
   </tbody>
 </table>
 <table>
   <thead>
       <tr>
-          <th>Key</th>
+          <th>Key:</th>
           <th>Value</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td>Request URL:</td>
-          <td><code>https://172.16.17.16/video/</code></td>
-      </tr>
-      <tr>
-          <td>Request Method:</td>
-          <td><code>POST</code></td>
-      </tr>
-      <tr>
-          <td>Device Action:</td>
-          <td><code>Permitted</code></td>
-      </tr>
-      <tr>
           <td>HTTP Response Size:</td>
-          <td><code>912</code></td>
+          <td><code>188</code></td>
       </tr>
       <tr>
           <td>HTTP Response Status:</td>
@@ -1324,33 +1199,21 @@
       </tr>
       <tr>
           <td>POST Parameters:</td>
-          <td><code>?c=whoami</code></td>
+          <td><code>?user_id=1</code></td>
       </tr>
   </tbody>
 </table>
 <table>
   <thead>
       <tr>
-          <th>Key</th>
+          <th>Key:</th>
           <th>Value</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td>Request URL:</td>
-          <td><code>https://172.16.17.16/video/</code></td>
-      </tr>
-      <tr>
-          <td>Request Method:</td>
-          <td><code>POST</code></td>
-      </tr>
-      <tr>
-          <td>Device Action:</td>
-          <td><code>Permitted</code></td>
-      </tr>
-      <tr>
           <td>HTTP Response Size:</td>
-          <td><code>910</code></td>
+          <td><code>253</code></td>
       </tr>
       <tr>
           <td>HTTP Response Status:</td>
@@ -1358,33 +1221,21 @@
       </tr>
       <tr>
           <td>POST Parameters:</td>
-          <td><code>?c=uname</code></td>
+          <td><code>?user_id=2</code></td>
       </tr>
   </tbody>
 </table>
 <table>
   <thead>
       <tr>
-          <th>Key</th>
+          <th>Key:</th>
           <th>Value</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td>Request URL:</td>
-          <td><code>https://172.16.17.16/video/</code></td>
-      </tr>
-      <tr>
-          <td>Request Method:</td>
-          <td><code>POST</code></td>
-      </tr>
-      <tr>
-          <td>Device Action:</td>
-          <td><code>Permitted</code></td>
-      </tr>
-      <tr>
           <td>HTTP Response Size:</td>
-          <td><code>1321</code></td>
+          <td><code>351</code></td>
       </tr>
       <tr>
           <td>HTTP Response Status:</td>
@@ -1392,33 +1243,21 @@
       </tr>
       <tr>
           <td>POST Parameters:</td>
-          <td><code>?c=cat /etc/passwd</code></td>
+          <td><code>?user_id=3</code></td>
       </tr>
   </tbody>
 </table>
 <table>
   <thead>
       <tr>
-          <th>Key</th>
+          <th>Key:</th>
           <th>Value</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td>Request URL:</td>
-          <td><code>https://172.16.17.16/video/</code></td>
-      </tr>
-      <tr>
-          <td>Request Method:</td>
-          <td><code>POST</code></td>
-      </tr>
-      <tr>
-          <td>Device Action:</td>
-          <td><code>Permitted</code></td>
-      </tr>
-      <tr>
           <td>HTTP Response Size:</td>
-          <td><code>1501</code></td>
+          <td><code>158</code></td>
       </tr>
       <tr>
           <td>HTTP Response Status:</td>
@@ -1426,35 +1265,44 @@
       </tr>
       <tr>
           <td>POST Parameters:</td>
-          <td><code>?c=cat /etc/shadow</code></td>
+          <td><code>?user_id=4</code></td>
+      </tr>
+  </tbody>
+</table>
+<table>
+  <thead>
+      <tr>
+          <th>Key:</th>
+          <th>Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>HTTP Response Size:</td>
+          <td><code>267</code></td>
+      </tr>
+      <tr>
+          <td>HTTP Response Status:</td>
+          <td><code>200</code></td>
+      </tr>
+      <tr>
+          <td>POST Parameters:</td>
+          <td><code>?user_id=5</code></td>
       </tr>
   </tbody>
 </table>
 
-<h4 class="relative group">Thoughts:
-    <div id="thoughts-2" class="anchor"></div>
+<h4 class="relative group">Thoughts
+    <div id="thoughts-1" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#thoughts-2" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#thoughts-1" aria-label="Anchor">#</a>
     </span>
     
 </h4>
-<blockquote><p>&ldquo;Oh&hellip; oh no. <code>/video/</code> has a web shell. The <code>c</code> parameter is being taken and executed. We can tell because the HTTP Response Size varies depending on the command executed.&rdquo;</p>
+<blockquote><p>&ldquo;Yeah, that&rsquo;s 100% IDOR. The responses aren&rsquo;t being blocked. The response sizes vary on different inputs, which gives reason to believe it is successful.&rdquo;</p>
 </blockquote>
-<h4 class="relative group">Action:
-    <div id="action" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#action" aria-label="Anchor">#</a>
-    </span>
-    
-</h4>
-<ul>
-<li>Containment of <code>WebServer1004</code> endpoint initiated.</li>
-</ul>
-
 <h3 class="relative group">Email
     <div id="email" class="anchor"></div>
     
@@ -1465,99 +1313,16 @@
     
 </h3>
 
-<h4 class="relative group">Thoughts:
-    <div id="thoughts-3" class="anchor"></div>
+<h4 class="relative group">Thoughts
+    <div id="thoughts-2" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#thoughts-3" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#thoughts-2" aria-label="Anchor">#</a>
     </span>
     
 </h4>
-<blockquote><p>&ldquo;No email stating there is a penetration test going on. Didn&rsquo;t think there would be, but I had to check regardless.&rdquo;</p>
-</blockquote>
-<h3 class="relative group">Endpoint Status
-    <div id="endpoint-status" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#endpoint-status" aria-label="Anchor">#</a>
-    </span>
-    
-</h3>
-<table>
-  <thead>
-      <tr>
-          <th>Key</th>
-          <th>Value</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Execution Confirmed:</td>
-          <td>Yes</td>
-      </tr>
-      <tr>
-          <td>Quarantine Status:</td>
-          <td>Not Quarantined</td>
-      </tr>
-      <tr>
-          <td>Infection Status:</td>
-          <td>Infected</td>
-      </tr>
-      <tr>
-          <td>EDR Agent:</td>
-          <td>Active</td>
-      </tr>
-      <tr>
-          <td>Containment:</td>
-          <td>Initiated</td>
-      </tr>
-  </tbody>
-</table>
-
-<h3 class="relative group">Findings:
-    <div id="findings" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#findings" aria-label="Anchor">#</a>
-    </span>
-    
-</h3>
-<table>
-  <thead>
-      <tr>
-          <th>Key</th>
-          <th>Value</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Reputation Results:</td>
-          <td>Malicious</td>
-      </tr>
-      <tr>
-          <td>Endpoint Execution:</td>
-          <td>True</td>
-      </tr>
-      <tr>
-          <td>Confidence Level:</td>
-          <td>High</td>
-      </tr>
-  </tbody>
-</table>
-
-<h3 class="relative group">Thoughts:
-    <div id="thoughts-4" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#thoughts-4" aria-label="Anchor">#</a>
-    </span>
-    
-</h3>
-<blockquote><p>&ldquo;This case is going to have to be escalated&hellip; I don&rsquo;t have logs showing how that webshell got there.&rdquo;</p>
+<blockquote><p>&ldquo;No emails indicating this is a penetration test.&rdquo;</p>
 </blockquote><hr>
 
 <h2 class="relative group">Determination
@@ -1570,7 +1335,7 @@
     
 </h2>
 
-<h3 class="relative group">Verdict:
+<h3 class="relative group">Verdict
     <div id="verdict" class="anchor"></div>
     
     <span
@@ -1584,7 +1349,7 @@
 <li>Escalate Case</li>
 </ul>
 
-<h3 class="relative group">Reasoning:
+<h3 class="relative group">Reasoning
     <div id="reasoning" class="anchor"></div>
     
     <span
@@ -1594,9 +1359,9 @@
     
 </h3>
 <ul>
-<li>SIEM logs imply the attacker gained execution via a webshell on <code>/video/</code> using the POST parameter <code>c</code>.</li>
-<li>Commend execution believed to have succeeded based on the HTTP response size variation based on the command sent.</li>
-<li>Unknown how the webshell appeared on the endpoint.</li>
+<li>Attacker incrementing value by 1 each connection, sweeping &ldquo;user_id&rdquo; parameter for responses.</li>
+<li>Varying response sizes with a 200 status indicates they are getting valid information back, which means the server is vulnerable.</li>
+<li>Flaw in the endpoint will need to be fixed.</li>
 </ul>
 <hr>
 
@@ -1610,7 +1375,7 @@
     
 </h2>
 
-<h3 class="relative group">Questions:
+<h3 class="relative group">Questions
     <div id="questions" class="anchor"></div>
     
     <span
@@ -1622,39 +1387,39 @@
 <table>
   <thead>
       <tr>
-          <th>Question</th>
-          <th>Answer</th>
+          <th>Questions</th>
+          <th>Answers</th>
       </tr>
   </thead>
   <tbody>
       <tr>
           <td>Is Traffic Malicious?</td>
-          <td>Malicious</td>
+          <td><code>Malicious</code></td>
       </tr>
       <tr>
           <td>What Is The Attack Type?</td>
-          <td>Command Injection</td>
+          <td><code>IDOR</code></td>
       </tr>
       <tr>
           <td>Check If It Is a Planned Test</td>
-          <td>Not Planned</td>
+          <td><code>Not Planned</code></td>
       </tr>
       <tr>
           <td>What Is the Direction of Traffic?</td>
-          <td>Internet → Company Network</td>
+          <td><code>Internet → Company Network</code></td>
       </tr>
       <tr>
           <td>Was the Attack Successful?</td>
-          <td>Yes</td>
+          <td><code>Yes</code></td>
       </tr>
       <tr>
           <td>Do You Need Tier 2 Escalation?</td>
-          <td>Yes</td>
+          <td><code>Yes</code></td>
       </tr>
   </tbody>
 </table>
 
-<h3 class="relative group">Artifacts:
+<h3 class="relative group">Artifacts
     <div id="artifacts" class="anchor"></div>
     
     <span
@@ -1666,21 +1431,26 @@
 <table>
   <thead>
       <tr>
-          <th>Value</th>
+          <th><code>Value</code></th>
           <th>Comment</th>
           <th>Type</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td><code>61.177.172.87</code></td>
+          <td><code>134.209.118.137</code></td>
           <td>Attacker IP</td>
           <td>IP Address</td>
+      </tr>
+      <tr>
+          <td><code>https://172.16.17.15/get_user_info/</code></td>
+          <td>Vulnerable URL</td>
+          <td>E-mail Domain</td>
       </tr>
   </tbody>
 </table>
 
-<h3 class="relative group">Notes:
+<h3 class="relative group">Notes
     <div id="notes" class="anchor"></div>
     
     <span
@@ -1689,22 +1459,22 @@
     </span>
     
 </h3>
-<blockquote><p>Verdict: True Positive. Containment Initiated. Escalation Requested.<br>
-Summary: Attacker sent command injection via <code>c</code> parameter to <code>/video/</code>, getting command execution. No logs on when the webshell appeared. Containment Initiated.<br>
-Validated via: SIEM logs and EDR Agent. <br>
-Actions taken: Containment Initiated.</p>
+<blockquote><p>Verdict: True Positive. Escalating. <br>
+Summary: Attacker abusing IDOR on <code>172.16.17.15</code> <code>/get_user_info/</code> POST parameter <code>user_id</code>. <br>
+Validated via: SIEM Logs<br>
+Actions taken: None.</p>
 </blockquote><hr>
 
-<h2 class="relative group">Final Thoughts:
-    <div id="final-thoughts" class="anchor"></div>
+<h2 class="relative group">Finishing Thoughts
+    <div id="finishing-thoughts" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#final-thoughts" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#finishing-thoughts" aria-label="Anchor">#</a>
     </span>
     
 </h2>
-<blockquote><p>&ldquo;There was no normal traffic from that IP beforehand either. Not even discovering <code>/videos/</code> which makes me worried&hellip; How did they know it was there, and that you could execute commands on the <code>c</code> parameter? Did they put it there or did someone else?&rdquo;</p>
+<blockquote><p>&ldquo;Wish there was more I could do. IDOR doesn&rsquo;t cause code execution, so that isn&rsquo;t a worry at least. I don&rsquo;t have permission to do more at the moment.&rdquo;</p>
 </blockquote>
           
           
@@ -1837,8 +1607,8 @@ Actions taken: Containment Initiated.</p>
           type="text/javascript"
           src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
           integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
-          data-oid="views_writeups/LetsDefend/SOC/168_118/index.md"
-          data-oid-likes="likes_writeups/LetsDefend/SOC/168_118/index.md"></script>
+          data-oid="views_writeups/LetsDefend/SOC/169_119/index.md"
+          data-oid-likes="likes_writeups/LetsDefend/SOC/169_119/index.md"></script>
       
     </section>
 
@@ -1856,36 +1626,21 @@ Actions taken: Containment Initiated.</p>
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/writeups/letsdefend/soc/167_117/">
+              href="/writeups/letsdefend/soc/168_118/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;(Writeup) LetsDefend EventID: 117 - [SOC167 - LS Command Detected in Requested URL]
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;(Writeup) LetsDefend EventID: 118 - [SOC168 - Whoami Command Detected in Request Body]
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
                 
-  <time datetime="2026-02-21T23:01:00&#43;00:00">February 21 2026</time>
+  <time datetime="2026-02-21T23:46:00&#43;00:00">February 21 2026</time>
 
               </span>
             
           
         </span>
         <span class="flex flex-col items-end">
-          
-            <a
-              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/writeups/letsdefend/soc/169_119/">
-              <span class="leading-6">
-                (Writeup) LetsDefend EventID: 119 - [SOC169 - Possible IDOR Attack Detected]&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
-              </span>
-            </a>
-            
-              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                
-  <time datetime="2026-02-22T21:48:00&#43;00:00">February 22 2026</time>
-
-              </span>
-            
           
         </span>
       </div>

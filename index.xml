@@ -9,7 +9,17 @@
     <managingEditor>reedveggleston@gmail.com (Reed Eggleston)</managingEditor>
     <webMaster>reedveggleston@gmail.com (Reed Eggleston)</webMaster>
     <copyright>© 2026 Reed Eggleston</copyright>
-    <lastBuildDate>Sat, 21 Feb 2026 23:46:00 +0000</lastBuildDate><atom:link href="https://www.policytopackets.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Feb 2026 21:48:00 +0000</lastBuildDate><atom:link href="https://www.policytopackets.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>(Writeup) LetsDefend EventID: 119 - [SOC169 - Possible IDOR Attack Detected]</title>
+      <link>https://www.policytopackets.com/writeups/letsdefend/soc/169_119/</link>
+      <pubDate>Sun, 22 Feb 2026 21:48:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/soc/169_119/</guid>
+      <description>Investigating an IDOR alert after repeated POST requests incremented a user ID parameter, reviewing HTTP logs and response behavior, and confirming successful data exposure based on varying response sizes and consistent 200 status codes before escalating the case.</description>
+      
+    </item>
     
     <item>
       <title>(Writeup) LetsDefend EventID: 118 - [SOC168 - Whoami Command Detected in Request Body]</title>

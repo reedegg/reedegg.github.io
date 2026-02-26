@@ -15,20 +15,20 @@
 
   
   
-    <title>(Writeup) LetsDefend EventID: 75 - [SOC105 - Requested T.I. URL address] &middot; Policy to Packets</title>
-    <meta name="title" content="(Writeup) LetsDefend EventID: 75 - [SOC105 - Requested T.I. URL address] &middot; Policy to Packets">
+    <title>(Writeup) LetsDefend EventID: 76 - [SOC137 - Malicious File/Script Download Attempt] &middot; Policy to Packets</title>
+    <meta name="title" content="(Writeup) LetsDefend EventID: 76 - [SOC137 - Malicious File/Script Download Attempt] &middot; Policy to Packets">
   
 
   
   
-    <meta name="description" content="Investigating a threat intelligence alert triggered by a bit.ly URL, expanding the shortened link to its final destination, validating reputation across VirusTotal, and confirming the traffic was legitimate mobile application activity before closing as a false positive.">
+    <meta name="description" content="Investigating a malicious DOCM download attempt, validating the file hash via VirusTotal, confirming no execution or C2 communication occurred, and verifying the threat was successfully blocked before impact.">
   
   
-    <meta name="keywords" content="Writeup,SOC,SIEM,False_Positive,Type_Threat_Intel,VirusTotal,">
+    <meta name="keywords" content="Writeup,SOC,SIEM,Type_Malware,True_Positive,VirusTotal,Macros,VBA,">
   
   
   
-  <link rel="canonical" href="https://www.policytopackets.com/writeups/letsdefend/soc/105_75/">
+  <link rel="canonical" href="https://www.policytopackets.com/writeups/letsdefend/soc/137_76/">
   
 
   
@@ -56,26 +56,26 @@
   
 
   
-  <meta property="og:url" content="https://www.policytopackets.com/writeups/letsdefend/soc/105_75/">
+  <meta property="og:url" content="https://www.policytopackets.com/writeups/letsdefend/soc/137_76/">
   <meta property="og:site_name" content="Policy to Packets">
-  <meta property="og:title" content="(Writeup) LetsDefend EventID: 75 - [SOC105 - Requested T.I. URL address]">
-  <meta property="og:description" content="LetsDefend SOC105 investigation involving a threat intelligence alert on a shortened bit.ly URL. Covers expanding URL shorteners to identify final destinations, validating IP and URL reputation via VirusTotal, researching associated applications, and distinguishing benign mobile app traffic from malicious indicators. Demonstrates practical threat intelligence validation and contextual analysis in a SOC environment.">
+  <meta property="og:title" content="(Writeup) LetsDefend EventID: 76 - [SOC137 - Malicious File/Script Download Attempt]">
+  <meta property="og:description" content="LetsDefend SOC137 investigation involving a blocked Microsoft Word DOCM file containing VBS macros. Covers malware hash validation through VirusTotal, review of SIEM and endpoint telemetry to confirm no execution occurred, and verification that no outbound command-and-control communication was established. Demonstrates practical malware triage, download attempt analysis, and confirmation of preventive control effectiveness in a SOC environment.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="writeups">
-    <meta property="article:published_time" content="2026-02-26T11:26:00+00:00">
-    <meta property="article:modified_time" content="2026-02-26T11:26:00+00:00">
+    <meta property="article:published_time" content="2026-02-26T14:23:00+00:00">
+    <meta property="article:modified_time" content="2026-02-26T14:23:00+00:00">
     <meta property="article:tag" content="Writeup">
     <meta property="article:tag" content="SOC">
     <meta property="article:tag" content="SIEM">
-    <meta property="article:tag" content="False_Positive">
-    <meta property="article:tag" content="Type_Threat_Intel">
+    <meta property="article:tag" content="Type_Malware">
+    <meta property="article:tag" content="True_Positive">
     <meta property="article:tag" content="VirusTotal">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="(Writeup) LetsDefend EventID: 75 - [SOC105 - Requested T.I. URL address]">
-  <meta name="twitter:description" content="LetsDefend SOC105 investigation involving a threat intelligence alert on a shortened bit.ly URL. Covers expanding URL shorteners to identify final destinations, validating IP and URL reputation via VirusTotal, researching associated applications, and distinguishing benign mobile app traffic from malicious indicators. Demonstrates practical threat intelligence validation and contextual analysis in a SOC environment.">
+  <meta name="twitter:title" content="(Writeup) LetsDefend EventID: 76 - [SOC137 - Malicious File/Script Download Attempt]">
+  <meta name="twitter:description" content="LetsDefend SOC137 investigation involving a blocked Microsoft Word DOCM file containing VBS macros. Covers malware hash validation through VirusTotal, review of SIEM and endpoint telemetry to confirm no execution occurred, and verification that no outbound command-and-control communication was established. Demonstrates practical malware triage, download attempt analysis, and confirmation of preventive control effectiveness in a SOC environment.">
 
   
   
@@ -233,25 +233,25 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Writeups",
-    "name": "(Writeup) LetsDefend EventID: 75 - [SOC105 - Requested T.I. URL address]",
-    "headline": "(Writeup) LetsDefend EventID: 75 - [SOC105 - Requested T.I. URL address]",
-    "description": "LetsDefend SOC105 investigation involving a threat intelligence alert on a shortened bit.ly URL. Covers expanding URL shorteners to identify final destinations, validating IP and URL reputation via VirusTotal, researching associated applications, and distinguishing benign mobile app traffic from malicious indicators. Demonstrates practical threat intelligence validation and contextual analysis in a SOC environment.",
+    "name": "(Writeup) LetsDefend EventID: 76 - [SOC137 - Malicious File\/Script Download Attempt]",
+    "headline": "(Writeup) LetsDefend EventID: 76 - [SOC137 - Malicious File\/Script Download Attempt]",
+    "description": "LetsDefend SOC137 investigation involving a blocked Microsoft Word DOCM file containing VBS macros. Covers malware hash validation through VirusTotal, review of SIEM and endpoint telemetry to confirm no execution occurred, and verification that no outbound command-and-control communication was established. Demonstrates practical malware triage, download attempt analysis, and confirmation of preventive control effectiveness in a SOC environment.",
     "inLanguage": "en",
-    "url" : "https://www.policytopackets.com/writeups/letsdefend/soc/105_75/",
+    "url" : "https://www.policytopackets.com/writeups/letsdefend/soc/137_76/",
     "author" : {
       "@type": "Person",
       "name": "Reed Eggleston"
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-02-26T11:26:00\u002b00:00",
-    "datePublished": "2026-02-26T11:26:00\u002b00:00",
+    "dateCreated": "2026-02-26T14:23:00\u002b00:00",
+    "datePublished": "2026-02-26T14:23:00\u002b00:00",
     
-    "dateModified": "2026-02-26T11:26:00\u002b00:00",
+    "dateModified": "2026-02-26T14:23:00\u002b00:00",
     
-    "keywords": ["Writeup","SOC","SIEM","False_Positive","Type_Threat_Intel","VirusTotal"],
+    "keywords": ["Writeup","SOC","SIEM","Type_Malware","True_Positive","VirusTotal","Macros","VBA"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "342"
+    "wordCount": "355"
   }]
   </script>
 
@@ -597,8 +597,8 @@
 
   
   <li class="hidden"> 
-    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/writeups/letsdefend/soc/105_75/"
-      >(Writeup) LetsDefend EventID: 75 - [SOC105 - Requested T.I. URL address]</a
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/writeups/letsdefend/soc/137_76/"
+      >(Writeup) LetsDefend EventID: 76 - [SOC137 - Malicious File/Script Download Attempt]</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -607,7 +607,7 @@
 
       
       <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral"> 
-        (Writeup) LetsDefend EventID: 75 - [SOC105 - Requested T.I. URL address]
+        (Writeup) LetsDefend EventID: 76 - [SOC137 - Malicious File/Script Download Attempt]
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -656,7 +656,7 @@
     
     
       
-  <time datetime="2026-02-26T11:26:00&#43;00:00">February 26 2026</time>
+  <time datetime="2026-02-26T14:23:00&#43;00:00">February 26 2026</time>
 
     
 
@@ -693,11 +693,11 @@
         
           
             
-              <a class="relative mt-[0.5rem] me-2" href="/tags/false_positive/">
+              <a class="relative mt-[0.5rem] me-2" href="/tags/macros/">
                 <span class="flex cursor-pointer">
   <span
     class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    False_Positive
+    Macros
   </span>
 </span>
 
@@ -723,11 +723,31 @@
 
               </a>
             
-              <a class="relative mt-[0.5rem] me-2" href="/tags/type_threat_intel/">
+              <a class="relative mt-[0.5rem] me-2" href="/tags/true_positive/">
                 <span class="flex cursor-pointer">
   <span
     class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Type_Threat_Intel
+    True_Positive
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/type_malware/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Type_Malware
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/vba/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    VBA
   </span>
 </span>
 
@@ -799,14 +819,33 @@
     </li>
     <li><a href="#playbook">Playbook</a>
       <ul>
-        <li><a href="#step-1-analyze-threat-intel-data">Step 1. Analyze Threat Intel Data</a>
+        <li><a href="#step-1-check-if-the-malware-is-quarantinedcleaned">Step 1. Check if the malware is quarantined/cleaned</a>
           <ul>
-            <li><a href="#virustotal">VirusTotal</a></li>
-            <li><a href="#google">Google</a></li>
+            <li><a href="#log-management">Log Management</a></li>
+            <li><a href="#endpoint-security">Endpoint Security</a></li>
+            <li><a href="#thoughts-1">Thoughts</a></li>
           </ul>
         </li>
-        <li><a href="#step-2-add-artifacts">Step 2. Add Artifacts</a></li>
-        <li><a href="#step-3-analyst-notes">Step 3. Analyst Notes</a></li>
+        <li><a href="#step-2-analyze-malware">Step 2. Analyze Malware</a>
+          <ul>
+            <li><a href="#virustotal">VirusTotal</a>
+              <ul>
+                <li><a href="#thoughts-2">Thoughts</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#step-3-check-if-someone-requested-the-c2">Step 3. Check if Someone Requested the C2</a>
+          <ul>
+            <li><a href="#log-management-1">Log Management</a>
+              <ul>
+                <li><a href="#thoughts-3">Thoughts</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#step-4-artifacts">Step 4. Artifacts</a></li>
+        <li><a href="#step-5-analyst-notes">Step 5. Analyst Notes</a></li>
       </ul>
     </li>
     <li><a href="#determination">Determination</a>
@@ -839,14 +878,33 @@
     </li>
     <li><a href="#playbook">Playbook</a>
       <ul>
-        <li><a href="#step-1-analyze-threat-intel-data">Step 1. Analyze Threat Intel Data</a>
+        <li><a href="#step-1-check-if-the-malware-is-quarantinedcleaned">Step 1. Check if the malware is quarantined/cleaned</a>
           <ul>
-            <li><a href="#virustotal">VirusTotal</a></li>
-            <li><a href="#google">Google</a></li>
+            <li><a href="#log-management">Log Management</a></li>
+            <li><a href="#endpoint-security">Endpoint Security</a></li>
+            <li><a href="#thoughts-1">Thoughts</a></li>
           </ul>
         </li>
-        <li><a href="#step-2-add-artifacts">Step 2. Add Artifacts</a></li>
-        <li><a href="#step-3-analyst-notes">Step 3. Analyst Notes</a></li>
+        <li><a href="#step-2-analyze-malware">Step 2. Analyze Malware</a>
+          <ul>
+            <li><a href="#virustotal">VirusTotal</a>
+              <ul>
+                <li><a href="#thoughts-2">Thoughts</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#step-3-check-if-someone-requested-the-c2">Step 3. Check if Someone Requested the C2</a>
+          <ul>
+            <li><a href="#log-management-1">Log Management</a>
+              <ul>
+                <li><a href="#thoughts-3">Thoughts</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#step-4-artifacts">Step 4. Artifacts</a></li>
+        <li><a href="#step-5-analyst-notes">Step 5. Analyst Notes</a></li>
       </ul>
     </li>
     <li><a href="#determination">Determination</a>
@@ -985,7 +1043,7 @@
 </h2>
 <ul>
 <li>LetsDefend is a Blue Team Training platform.</li>
-<li>This writeup documents a SOC alert investigation involving {{ alert type }}.</li>
+<li>This writeup documents a SOC alert investigation involving a blocked attempt to download a Microsoft Word document with attached VBS macros.</li>
 </ul>
 <hr>
 
@@ -1008,15 +1066,15 @@
   <tbody>
       <tr>
           <td>EventID:</td>
-          <td><code>75</code></td>
+          <td><code>76</code></td>
       </tr>
       <tr>
           <td>Event Time:</td>
-          <td><code>Mar, 07, 2021, 05:47 PM</code></td>
+          <td><code>Mar, 14, 2021, 07:15 PM</code></td>
       </tr>
       <tr>
           <td>Rule:</td>
-          <td><code>SOC105 - Requested T.I. URL address</code></td>
+          <td><code>SOC137 - Malicious File/Script Download Attempt</code></td>
       </tr>
       <tr>
           <td>Level:</td>
@@ -1024,35 +1082,31 @@
       </tr>
       <tr>
           <td>Source Address:</td>
-          <td><code>10.15.15.12</code></td>
+          <td><code>172.16.17.37</code></td>
       </tr>
       <tr>
           <td>Source Hostname:</td>
-          <td><code>MarksPhone</code></td>
+          <td><code>NicolasPRD</code></td>
       </tr>
       <tr>
-          <td>Destination Address:</td>
-          <td><code>67.199.248.10</code></td>
+          <td>File Name:</td>
+          <td><code>INVOICE PACKAGE LINK TO DOWNLOAD.docm</code></td>
       </tr>
       <tr>
-          <td>Destination Hostname:</td>
-          <td><code>bit.ly</code></td>
+          <td>File Hash:</td>
+          <td><code>f2d0c66b801244c059f636d08a474079</code></td>
       </tr>
       <tr>
-          <td>Username:</td>
-          <td><code>Mark</code></td>
-      </tr>
-      <tr>
-          <td>Request URL:</td>
-          <td><code>https://bit.ly/TAPSCAN</code></td>
-      </tr>
-      <tr>
-          <td>User Agent:</td>
-          <td><code>Mozilla/5.0 (Windows NT 5.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36</code></td>
+          <td>File Size:</td>
+          <td><code>16.66 Kb</code></td>
       </tr>
       <tr>
           <td>Device Action:</td>
-          <td><code>Allowed</code></td>
+          <td><code>Blocked</code></td>
+      </tr>
+      <tr>
+          <td>File (Passwordinfected):</td>
+          <td><code>Download</code></td>
       </tr>
   </tbody>
 </table>
@@ -1092,7 +1146,7 @@
     </span>
     
 </h3>
-<blockquote><p>&ldquo;Is that specific <code>bit.ly</code> address a threat indicator, or is it <code>bit.ly</code> in general?&rdquo;</p>
+<blockquote><p>&ldquo;Luckily the VBS macro&rsquo;d doc file got blocked.&rdquo;</p>
 </blockquote><hr>
 
 <h2 class="relative group">Playbook
@@ -1105,12 +1159,55 @@
     
 </h2>
 
-<h3 class="relative group">Step 1. Analyze Threat Intel Data
-    <div id="step-1-analyze-threat-intel-data" class="anchor"></div>
+<h3 class="relative group">Step 1. Check if the malware is quarantined/cleaned
+    <div id="step-1-check-if-the-malware-is-quarantinedcleaned" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-1-analyze-threat-intel-data" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-1-check-if-the-malware-is-quarantinedcleaned" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+
+<h4 class="relative group">Log Management
+    <div id="log-management" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#log-management" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<blockquote><p>No relevant logs. (You must keep in mind the timeline. There is another case for the same endpoint in the same month, but they are unrelated to this exercise.)</p>
+</blockquote>
+<h4 class="relative group">Endpoint Security
+    <div id="endpoint-security" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#endpoint-security" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<blockquote><p>Endpoint is messed up due to a different case, but there is no indication the case we&rsquo;re working on has execution.</p>
+</blockquote>
+<h4 class="relative group">Thoughts
+    <div id="thoughts-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#thoughts-1" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<blockquote><p>&ldquo;<code>Quarantined</code>. The malware was successfully blocked.&rdquo;</p>
+</blockquote>
+<h3 class="relative group">Step 2. Analyze Malware
+    <div id="step-2-analyze-malware" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-2-analyze-malware" aria-label="Anchor">#</a>
     </span>
     
 </h3>
@@ -1129,54 +1226,68 @@
       <tr>
           <th>Data</th>
           <th>Result</th>
-          <th>Note</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td>IP</td>
-          <td><a href="https://www.virustotal.com/gui/ip-address/67.199.248.10/details"  target="_blank" rel="noreferrer">2/93</a></td>
-          <td>It&rsquo;s <code>bit.ly</code> the URL shortener. It&rsquo;s utilized by benign and malicious traffic alike.</td>
-      </tr>
-      <tr>
-          <td>URL</td>
-          <td><a href="https://www.virustotal.com/gui/url/6bacb5686cd0a778532e6ca53026807bcbac02b6ce9a7a8f712c34d88276274b/detection"  target="_blank" rel="noreferrer">1/94</a></td>
-          <td>You can find the &lsquo;Final URL&rsquo; in the &lsquo;Details&rsquo; tab.</td>
-      </tr>
-      <tr>
-          <td>Final URL</td>
-          <td><a href="https://www.virustotal.com/gui/url/a1e5c7e7be5a4ce22f6599a9e6555f591215b144e64c53569d8749fa33d33709/details"  target="_blank" rel="noreferrer">1/94</a></td>
-          <td>In the URL and in &lsquo;Details&rsquo; you can find the app name and the developer&rsquo;s website URL.</td>
-      </tr>
-      <tr>
-          <td>Developer URL</td>
-          <td><a href="https://www.virustotal.com/gui/url/31b6a0748d1a37f9e291480761c9becc6f5d8c1d7a0d1c2c5a22af4eab98bb9e"  target="_blank" rel="noreferrer">0/94</a></td>
-          <td>Gonna google about this application.</td>
+          <td>MD5 Hash</td>
+          <td><a href="https://www.virustotal.com/gui/file/08d4fd5032b8b24072bdff43932630d4200f68404d7e12ffeeda2364c8158873/detection"  target="_blank" rel="noreferrer">39/66</a></td>
       </tr>
   </tbody>
 </table>
 
-<h4 class="relative group">Google
-    <div id="google" class="anchor"></div>
+<h5 class="relative group">Thoughts
+    <div id="thoughts-2" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#google" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#thoughts-2" aria-label="Anchor">#</a>
     </span>
     
-</h4>
-<blockquote><p>&ldquo;Searching for the app name <code>pdf.tap.scanner</code> gives us the very popular android application: &lsquo;PDF Scanner app - TapScanner&rsquo;&hellip; <code>Non-malicious</code>&rdquo;</p>
+</h5>
+<blockquote><p>&ldquo;<code>Malicious</code>. If there was execution of this malware, we&rsquo;d see a DNS resolution of <code>filetransfer.io</code>&rdquo;</p>
 </blockquote>
-<h3 class="relative group">Step 2. Add Artifacts
-    <div id="step-2-add-artifacts" class="anchor"></div>
+<h3 class="relative group">Step 3. Check if Someone Requested the C2
+    <div id="step-3-check-if-someone-requested-the-c2" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-2-add-artifacts" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-3-check-if-someone-requested-the-c2" aria-label="Anchor">#</a>
     </span>
     
 </h3>
-<p>(The long url was snipped for the writeup page formatting.)</p>
+
+<h4 class="relative group">Log Management
+    <div id="log-management-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#log-management-1" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<blockquote><p>No relevant logs. Not connecting to the IOC domain we indicated.</p>
+</blockquote>
+<h5 class="relative group">Thoughts
+    <div id="thoughts-3" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#thoughts-3" aria-label="Anchor">#</a>
+    </span>
+    
+</h5>
+<blockquote><p>&ldquo;<code>Not Accessed</code>. Endpoint didn&rsquo;t run the malware.&rdquo;</p>
+</blockquote>
+<h3 class="relative group">Step 4. Artifacts
+    <div id="step-4-artifacts" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-4-artifacts" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
 <table>
   <thead>
       <tr>
@@ -1187,35 +1298,25 @@
   </thead>
   <tbody>
       <tr>
-          <td><code>67.199.248.10</code></td>
-          <td>A bit.ly ip</td>
-          <td>IP Address</td>
-      </tr>
-      <tr>
-          <td><code>https://bit.ly/TAPSCAN</code></td>
-          <td>Alert Trigger</td>
-          <td>E-mail Domain</td>
-      </tr>
-      <tr>
-          <td><code>-long_url_snipped-</code></td>
-          <td>Redirect Final URL</td>
-          <td>E-mail Domain</td>
+          <td><code>f2d0c66b801244c059f636d08a474079</code></td>
+          <td>trojan.vpnz</td>
+          <td>MD5 Hash</td>
       </tr>
   </tbody>
 </table>
 
-<h3 class="relative group">Step 3. Analyst Notes
-    <div id="step-3-analyst-notes" class="anchor"></div>
+<h3 class="relative group">Step 5. Analyst Notes
+    <div id="step-5-analyst-notes" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-3-analyst-notes" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-5-analyst-notes" aria-label="Anchor">#</a>
     </span>
     
 </h3>
-<blockquote><p>&ldquo;Verdict: False Positive. Closing Case. <br>
-Summary: Endpoint opened bit.ly link that linked to a popular PDF scanner on android. No indicators of application being malicious. <br>
-Validated via: VirusTotal. <br>
+<blockquote><p>&ldquo;Verdict: True Positive. Closing case. <br>
+Summary: Endpoint attempted to download malicious DOCM file (Microsoft Word file with VBS macros) and was blocked. (Machine has other issues, but outside scope of this alert.) <br>
+Validated via: Log Management, Endpoint Security, VirusTotal. <br>
 Actions taken: None.&rdquo;</p>
 </blockquote><hr>
 
@@ -1239,7 +1340,7 @@ Actions taken: None.&rdquo;</p>
     
 </h3>
 <ul>
-<li>False Positive</li>
+<li>True Positive</li>
 <li>Close Case</li>
 </ul>
 
@@ -1253,7 +1354,8 @@ Actions taken: None.&rdquo;</p>
     
 </h3>
 <ul>
-<li>Legitimate <code>bit.ly</code> link to a popular pdf scanning app on the google play store</li>
+<li>It was indeed malware. (trojan.vpnz)</li>
+<li>It was blocked.</li>
 </ul>
 <hr>
 
@@ -1266,7 +1368,7 @@ Actions taken: None.&rdquo;</p>
     </span>
     
 </h2>
-<blockquote><p>&ldquo;Would be a good idea to review if the alert is happening on anything above 0 from TI, because I imagine some will regard any and all <code>bit.ly</code> links as malicious. If that&rsquo;s the standard we want to keep, that&rsquo;s fine. Just something to consider.&rdquo;</p>
+<blockquote><p>&ldquo;I&rsquo;m happy the <code>DOCM</code> was blocked! Though this exercise did have issues with a lot of overlap with another alert so you had to ignore some problems. Not exactly what you&rsquo;d do in a real SOC.&rdquo;</p>
 </blockquote>
           
           
@@ -1399,8 +1501,8 @@ Actions taken: None.&rdquo;</p>
           type="text/javascript"
           src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
           integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
-          data-oid="views_writeups/LetsDefend/SOC/105_75/index.md"
-          data-oid-likes="likes_writeups/LetsDefend/SOC/105_75/index.md"></script>
+          data-oid="views_writeups/LetsDefend/SOC/137_76/index.md"
+          data-oid-likes="likes_writeups/LetsDefend/SOC/137_76/index.md"></script>
       
     </section>
 
@@ -1418,36 +1520,21 @@ Actions taken: None.&rdquo;</p>
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/writeups/letsdefend/soc/105_28/">
+              href="/writeups/letsdefend/soc/105_75/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;(Writeup) LetsDefend EventID: 28 - [SOC105 - Requested T.I. URL address]
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;(Writeup) LetsDefend EventID: 75 - [SOC105 - Requested T.I. URL address]
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
                 
-  <time datetime="2026-02-26T10:24:00&#43;00:00">February 26 2026</time>
+  <time datetime="2026-02-26T11:26:00&#43;00:00">February 26 2026</time>
 
               </span>
             
           
         </span>
         <span class="flex flex-col items-end">
-          
-            <a
-              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/writeups/letsdefend/soc/137_76/">
-              <span class="leading-6">
-                (Writeup) LetsDefend EventID: 76 - [SOC137 - Malicious File/Script Download Attempt]&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
-              </span>
-            </a>
-            
-              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                
-  <time datetime="2026-02-26T14:23:00&#43;00:00">February 26 2026</time>
-
-              </span>
-            
           
         </span>
       </div>

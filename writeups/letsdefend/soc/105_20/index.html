@@ -15,20 +15,20 @@
 
   
   
-    <title>(Writeup) LetsDefend EventID: 77 - [SOC138 - Detected Suspicious Xls File] &middot; Policy to Packets</title>
-    <meta name="title" content="(Writeup) LetsDefend EventID: 77 - [SOC138 - Detected Suspicious Xls File] &middot; Policy to Packets">
+    <title>(Writeup) LetsDefend EventID: 20 - [SOC105 - Requested T.I. URL address] &middot; Policy to Packets</title>
+    <meta name="title" content="(Writeup) LetsDefend EventID: 20 - [SOC105 - Requested T.I. URL address] &middot; Policy to Packets">
   
 
   
   
-    <meta name="description" content="Investigating a suspicious Excel macro alert after a malicious XLSM file executed on an endpoint, validating malware through VirusTotal and Hybrid Analysis, correlating outbound encrypted traffic to a confirmed C2 server, and initiating containment following confirmed compromise.">
+    <meta name="description" content="Investigating a threat intelligence alert after a server connected to a flagged URL, validating the IP, domain, and repository source, confirming legitimate GitHub activity, and closing the case as a false positive.">
   
   
-    <meta name="keywords" content="Writeup,SOC,SIEM,Type_Malware,Malware,VBA,Macros,VirusTotal,Hybrid-Analysis,True_Positive,">
+    <meta name="keywords" content="Writeup,SOC,SIEM,False_Positive,Type_Threat_Intel,VirusTotal,">
   
   
   
-  <link rel="canonical" href="https://www.policytopackets.com/writeups/letsdefend/soc/138_77/">
+  <link rel="canonical" href="https://www.policytopackets.com/writeups/letsdefend/soc/105_20/">
   
 
   
@@ -56,26 +56,26 @@
   
 
   
-  <meta property="og:url" content="https://www.policytopackets.com/writeups/letsdefend/soc/138_77/">
+  <meta property="og:url" content="https://www.policytopackets.com/writeups/letsdefend/soc/105_20/">
   <meta property="og:site_name" content="Policy to Packets">
-  <meta property="og:title" content="(Writeup) LetsDefend EventID: 77 - [SOC138 - Detected Suspicious Xls File]">
-  <meta property="og:description" content="Detailed LetsDefend SOC138 investigation into a malicious Excel macro (XLSM) file leading to endpoint compromise. Covers SIEM firewall log correlation, identification of encrypted outbound C2 traffic, malware validation using VirusTotal and Hybrid Analysis (CVE-2017-11882), and endpoint containment actions. Practical example of detecting macro-based malware execution and confirming command-and-control communication in a SOC environment.">
+  <meta property="og:title" content="(Writeup) LetsDefend EventID: 20 - [SOC105 - Requested T.I. URL address]">
+  <meta property="og:description" content="LetsDefend SOC105 investigation involving a threat intelligence alert triggered by outbound traffic to a GitHub raw content URL. Includes validating IP, domain, and URL reputation via VirusTotal, reviewing repository legitimacy on GitHub, analyzing wget activity from a Linux server, and determining the alert to be a false positive. Demonstrates practical threat intelligence validation and contextual analysis in a SOC environment.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="writeups">
-    <meta property="article:published_time" content="2026-02-23T13:36:00+00:00">
-    <meta property="article:modified_time" content="2026-02-23T13:36:00+00:00">
+    <meta property="article:published_time" content="2026-02-25T17:09:00+00:00">
+    <meta property="article:modified_time" content="2026-02-25T17:09:00+00:00">
     <meta property="article:tag" content="Writeup">
     <meta property="article:tag" content="SOC">
     <meta property="article:tag" content="SIEM">
-    <meta property="article:tag" content="Type_Malware">
-    <meta property="article:tag" content="Malware">
-    <meta property="article:tag" content="VBA">
+    <meta property="article:tag" content="False_Positive">
+    <meta property="article:tag" content="Type_Threat_Intel">
+    <meta property="article:tag" content="VirusTotal">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="(Writeup) LetsDefend EventID: 77 - [SOC138 - Detected Suspicious Xls File]">
-  <meta name="twitter:description" content="Detailed LetsDefend SOC138 investigation into a malicious Excel macro (XLSM) file leading to endpoint compromise. Covers SIEM firewall log correlation, identification of encrypted outbound C2 traffic, malware validation using VirusTotal and Hybrid Analysis (CVE-2017-11882), and endpoint containment actions. Practical example of detecting macro-based malware execution and confirming command-and-control communication in a SOC environment.">
+  <meta name="twitter:title" content="(Writeup) LetsDefend EventID: 20 - [SOC105 - Requested T.I. URL address]">
+  <meta name="twitter:description" content="LetsDefend SOC105 investigation involving a threat intelligence alert triggered by outbound traffic to a GitHub raw content URL. Includes validating IP, domain, and URL reputation via VirusTotal, reviewing repository legitimacy on GitHub, analyzing wget activity from a Linux server, and determining the alert to be a false positive. Demonstrates practical threat intelligence validation and contextual analysis in a SOC environment.">
 
   
   
@@ -233,25 +233,25 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Writeups",
-    "name": "(Writeup) LetsDefend EventID: 77 - [SOC138 - Detected Suspicious Xls File]",
-    "headline": "(Writeup) LetsDefend EventID: 77 - [SOC138 - Detected Suspicious Xls File]",
-    "description": "Detailed LetsDefend SOC138 investigation into a malicious Excel macro (XLSM) file leading to endpoint compromise. Covers SIEM firewall log correlation, identification of encrypted outbound C2 traffic, malware validation using VirusTotal and Hybrid Analysis (CVE-2017-11882), and endpoint containment actions. Practical example of detecting macro-based malware execution and confirming command-and-control communication in a SOC environment.",
+    "name": "(Writeup) LetsDefend EventID: 20 - [SOC105 - Requested T.I. URL address]",
+    "headline": "(Writeup) LetsDefend EventID: 20 - [SOC105 - Requested T.I. URL address]",
+    "description": "LetsDefend SOC105 investigation involving a threat intelligence alert triggered by outbound traffic to a GitHub raw content URL. Includes validating IP, domain, and URL reputation via VirusTotal, reviewing repository legitimacy on GitHub, analyzing wget activity from a Linux server, and determining the alert to be a false positive. Demonstrates practical threat intelligence validation and contextual analysis in a SOC environment.",
     "inLanguage": "en",
-    "url" : "https://www.policytopackets.com/writeups/letsdefend/soc/138_77/",
+    "url" : "https://www.policytopackets.com/writeups/letsdefend/soc/105_20/",
     "author" : {
       "@type": "Person",
       "name": "Reed Eggleston"
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-02-23T13:36:00\u002b00:00",
-    "datePublished": "2026-02-23T13:36:00\u002b00:00",
+    "dateCreated": "2026-02-25T17:09:00\u002b00:00",
+    "datePublished": "2026-02-25T17:09:00\u002b00:00",
     
-    "dateModified": "2026-02-23T13:36:00\u002b00:00",
+    "dateModified": "2026-02-25T17:09:00\u002b00:00",
     
-    "keywords": ["Writeup","SOC","SIEM","Type_Malware","Malware","VBA","Macros","VirusTotal","Hybrid-Analysis","True_Positive"],
+    "keywords": ["Writeup","SOC","SIEM","False_Positive","Type_Threat_Intel","VirusTotal"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "450"
+    "wordCount": "303"
   }]
   </script>
 
@@ -597,8 +597,8 @@
 
   
   <li class="hidden"> 
-    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/writeups/letsdefend/soc/138_77/"
-      >(Writeup) LetsDefend EventID: 77 - [SOC138 - Detected Suspicious Xls File]</a
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/writeups/letsdefend/soc/105_20/"
+      >(Writeup) LetsDefend EventID: 20 - [SOC105 - Requested T.I. URL address]</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -607,7 +607,7 @@
 
       
       <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral"> 
-        (Writeup) LetsDefend EventID: 77 - [SOC138 - Detected Suspicious Xls File]
+        (Writeup) LetsDefend EventID: 20 - [SOC105 - Requested T.I. URL address]
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -656,7 +656,7 @@
     
     
       
-  <time datetime="2026-02-23T13:36:00&#43;00:00">February 23 2026</time>
+  <time datetime="2026-02-25T17:09:00&#43;00:00">February 25 2026</time>
 
     
 
@@ -693,31 +693,11 @@
         
           
             
-              <a class="relative mt-[0.5rem] me-2" href="/tags/hybrid-analysis/">
+              <a class="relative mt-[0.5rem] me-2" href="/tags/false_positive/">
                 <span class="flex cursor-pointer">
   <span
     class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Hybrid-Analysis
-  </span>
-</span>
-
-              </a>
-            
-              <a class="relative mt-[0.5rem] me-2" href="/tags/macros/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Macros
-  </span>
-</span>
-
-              </a>
-            
-              <a class="relative mt-[0.5rem] me-2" href="/tags/malware/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Malware
+    False_Positive
   </span>
 </span>
 
@@ -743,31 +723,11 @@
 
               </a>
             
-              <a class="relative mt-[0.5rem] me-2" href="/tags/true_positive/">
+              <a class="relative mt-[0.5rem] me-2" href="/tags/type_threat_intel/">
                 <span class="flex cursor-pointer">
   <span
     class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    True_Positive
-  </span>
-</span>
-
-              </a>
-            
-              <a class="relative mt-[0.5rem] me-2" href="/tags/type_malware/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Type_Malware
-  </span>
-</span>
-
-              </a>
-            
-              <a class="relative mt-[0.5rem] me-2" href="/tags/vba/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    VBA
+    Type_Threat_Intel
   </span>
 </span>
 
@@ -837,49 +797,22 @@
         <li><a href="#thoughts">Thoughts</a></li>
       </ul>
     </li>
-    <li><a href="#analysis">Analysis</a>
+    <li><a href="#playbook">Playbook</a>
       <ul>
-        <li><a href="#tools-used">Tools Used</a></li>
-        <li><a href="#firewall-logs">Firewall Logs</a>
+        <li><a href="#step-1-analyze-threat-intel-data">Step 1. Analyze Threat Intel Data</a>
           <ul>
-            <li><a href="#thoughts-1">Thoughts</a></li>
+            <li><a href="#virustotal">VirusTotal</a></li>
+            <li><a href="#github">GitHub</a></li>
           </ul>
         </li>
-        <li><a href="#endpoint-edr-agent">Endpoint (EDR Agent)</a>
-          <ul>
-            <li><a href="#actions-1">Actions</a></li>
-            <li><a href="#thoughts-2">Thoughts</a></li>
-          </ul>
-        </li>
-        <li><a href="#file">File</a>
-          <ul>
-            <li><a href="#thoughts-3">Thoughts</a></li>
-          </ul>
-        </li>
-        <li><a href="#ip">IP</a>
-          <ul>
-            <li><a href="#thoughts-4">Thoughts</a></li>
-          </ul>
-        </li>
-        <li><a href="#email">Email</a>
-          <ul>
-            <li><a href="#thoughts-5">Thoughts</a></li>
-          </ul>
-        </li>
+        <li><a href="#step-2-artifacts">Step 2. Artifacts</a></li>
+        <li><a href="#step-3-analyst-notes">Step 3. Analyst Notes</a></li>
       </ul>
     </li>
     <li><a href="#determination">Determination</a>
       <ul>
         <li><a href="#verdict">Verdict</a></li>
         <li><a href="#reasoning">Reasoning</a></li>
-        <li><a href="#actions-2">Actions</a></li>
-      </ul>
-    </li>
-    <li><a href="#playbook">Playbook</a>
-      <ul>
-        <li><a href="#questions">Questions</a></li>
-        <li><a href="#artifacts">Artifacts</a></li>
-        <li><a href="#notes">Notes</a></li>
       </ul>
     </li>
     <li><a href="#final-thoughts">Final Thoughts</a></li>
@@ -904,49 +837,22 @@
         <li><a href="#thoughts">Thoughts</a></li>
       </ul>
     </li>
-    <li><a href="#analysis">Analysis</a>
+    <li><a href="#playbook">Playbook</a>
       <ul>
-        <li><a href="#tools-used">Tools Used</a></li>
-        <li><a href="#firewall-logs">Firewall Logs</a>
+        <li><a href="#step-1-analyze-threat-intel-data">Step 1. Analyze Threat Intel Data</a>
           <ul>
-            <li><a href="#thoughts-1">Thoughts</a></li>
+            <li><a href="#virustotal">VirusTotal</a></li>
+            <li><a href="#github">GitHub</a></li>
           </ul>
         </li>
-        <li><a href="#endpoint-edr-agent">Endpoint (EDR Agent)</a>
-          <ul>
-            <li><a href="#actions-1">Actions</a></li>
-            <li><a href="#thoughts-2">Thoughts</a></li>
-          </ul>
-        </li>
-        <li><a href="#file">File</a>
-          <ul>
-            <li><a href="#thoughts-3">Thoughts</a></li>
-          </ul>
-        </li>
-        <li><a href="#ip">IP</a>
-          <ul>
-            <li><a href="#thoughts-4">Thoughts</a></li>
-          </ul>
-        </li>
-        <li><a href="#email">Email</a>
-          <ul>
-            <li><a href="#thoughts-5">Thoughts</a></li>
-          </ul>
-        </li>
+        <li><a href="#step-2-artifacts">Step 2. Artifacts</a></li>
+        <li><a href="#step-3-analyst-notes">Step 3. Analyst Notes</a></li>
       </ul>
     </li>
     <li><a href="#determination">Determination</a>
       <ul>
         <li><a href="#verdict">Verdict</a></li>
         <li><a href="#reasoning">Reasoning</a></li>
-        <li><a href="#actions-2">Actions</a></li>
-      </ul>
-    </li>
-    <li><a href="#playbook">Playbook</a>
-      <ul>
-        <li><a href="#questions">Questions</a></li>
-        <li><a href="#artifacts">Artifacts</a></li>
-        <li><a href="#notes">Notes</a></li>
       </ul>
     </li>
     <li><a href="#final-thoughts">Final Thoughts</a></li>
@@ -1079,7 +985,7 @@
 </h2>
 <ul>
 <li>LetsDefend is a Blue Team Training platform.</li>
-<li>This writeup documents a SOC alert investigation into a malicious Excel file containing macros that ran on an endpoint, resulting in a compromise.</li>
+<li>This writeup documents a SOC alert investigation involving {{ alert type }}.</li>
 </ul>
 <hr>
 
@@ -1102,15 +1008,15 @@
   <tbody>
       <tr>
           <td>EventID:</td>
-          <td><code>77</code></td>
+          <td><code>20</code></td>
       </tr>
       <tr>
           <td>Event Time:</td>
-          <td><code>Mar, 13, 2021, 08:20 PM</code></td>
+          <td><code>Oct, 19, 2020, 09:54 PM</code></td>
       </tr>
       <tr>
           <td>Rule:</td>
-          <td><code>SOC138 - Detected Suspicious Xls File</code></td>
+          <td><code>SOC105 - Requested T.I. URL address</code></td>
       </tr>
       <tr>
           <td>Level:</td>
@@ -1118,23 +1024,31 @@
       </tr>
       <tr>
           <td>Source Address:</td>
-          <td><code>172.16.17.56</code></td>
+          <td><code>172.16.20.4</code></td>
       </tr>
       <tr>
           <td>Source Hostname:</td>
-          <td><code>Sofia</code></td>
+          <td><code>gitServer</code></td>
       </tr>
       <tr>
-          <td>File Name:</td>
-          <td><code>ORDER SHEET &amp; SPEC.xlsm</code></td>
+          <td>Destination Address:</td>
+          <td><code>151.101.112.133</code></td>
       </tr>
       <tr>
-          <td>File Hash:</td>
-          <td><code>7ccf88c0bbe3b29bf19d877c4596a8d4</code></td>
+          <td>Destination Hostname:</td>
+          <td><code>raw.github.com</code></td>
       </tr>
       <tr>
-          <td>File Size:</td>
-          <td><code>2.66Mb</code></td>
+          <td>Username:</td>
+          <td><code>gitUser</code></td>
+      </tr>
+      <tr>
+          <td>Request URL:</td>
+          <td><code>https://raw.githubusercontent.com/django/django/master/setup.py</code></td>
+      </tr>
+      <tr>
+          <td>User Agent:</td>
+          <td><code>Wget/1.19.4 (linux-gnu)</code></td>
       </tr>
       <tr>
           <td>Device Action:</td>
@@ -1178,268 +1092,120 @@
     </span>
     
 </h3>
-<blockquote><p>&ldquo;It was a &lsquo;xlsm&rsquo; file (Excel sheet containing VBA macros) and yet it was allowed. Oh boy. Let&rsquo;s start with the network logs of the endpoint in the SIEM to see what it&rsquo;s been up to. I&rsquo;ll also throw that file into VirusTotal and Hybrid Analysis.&rdquo;</p>
+<blockquote><p>&ldquo;That looks like the normal GitHub &lsquo;raw&rsquo; url. If I were a betting man, I&rsquo;d bet false positive.&rdquo;</p>
 </blockquote><hr>
 
-<h2 class="relative group">Analysis
-    <div id="analysis" class="anchor"></div>
+<h2 class="relative group">Playbook
+    <div id="playbook" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#analysis" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#playbook" aria-label="Anchor">#</a>
     </span>
     
 </h2>
 
-<h3 class="relative group">Tools Used
-    <div id="tools-used" class="anchor"></div>
+<h3 class="relative group">Step 1. Analyze Threat Intel Data
+    <div id="step-1-analyze-threat-intel-data" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#tools-used" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-1-analyze-threat-intel-data" aria-label="Anchor">#</a>
     </span>
     
 </h3>
-<ul>
-<li><a href="https://www.virustotal.com/gui/"  target="_blank" rel="noreferrer">VirusTotal</a></li>
-<li><a href="https://hybrid-analysis.com/"  target="_blank" rel="noreferrer">Hybrid Analysis</a></li>
-<li><a href="https://talosintelligence.com/"  target="_blank" rel="noreferrer">Talos Intelligence</a></li>
-<li><a href="https://www.abuseipdb.com/"  target="_blank" rel="noreferrer">AbuseIPDB</a></li>
-</ul>
 
-<h3 class="relative group">Firewall Logs
-    <div id="firewall-logs" class="anchor"></div>
+<h4 class="relative group">VirusTotal
+    <div id="virustotal" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#firewall-logs" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#virustotal" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<table>
+  <thead>
+      <tr>
+          <th>Item</th>
+          <th>Result</th>
+          <th>Comment</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>IP</td>
+          <td><a href="https://www.virustotal.com/gui/ip-address/151.101.112.133/detection"  target="_blank" rel="noreferrer">Green</a></td>
+          <td>Google results under &ldquo;Details&rdquo; mentions it being a raw.githubusercontent.com IP.</td>
+      </tr>
+      <tr>
+          <td>URL</td>
+          <td><a href="https://www.virustotal.com/gui/url/a129d9a69a5feae5c6b26dd4976fc6d6cf7fc50862f81bd79b94129990f1816c"  target="_blank" rel="noreferrer">1/94</a></td>
+          <td>One false positive.</td>
+      </tr>
+      <tr>
+          <td>Domain</td>
+          <td><a href="https://www.virustotal.com/gui/domain/raw.github.com/details"  target="_blank" rel="noreferrer">Green</a></td>
+          <td>Real GitHub domain.</td>
+      </tr>
+  </tbody>
+</table>
+
+<h4 class="relative group">GitHub
+    <div id="github" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#github" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<blockquote><p>&ldquo;I went to <code>https://github.com/django/django</code> to take a look. It&rsquo;s the real django page. <code>setup.py</code> isn&rsquo;t there anymore so they must&rsquo;ve moved it. Regardless, it&rsquo;s a false positive.&rdquo;</p>
+</blockquote>
+<h3 class="relative group">Step 2. Artifacts
+    <div id="step-2-artifacts" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-2-artifacts" aria-label="Anchor">#</a>
     </span>
     
 </h3>
 <table>
   <thead>
       <tr>
-          <th>Key:</th>
           <th><code>Value</code></th>
+          <th>Comment</th>
+          <th>Type</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td>type:</td>
-          <td><code>Firewall</code></td>
+          <td><code>https://raw.githubusercontent.com/django/django/master/setup.py</code></td>
+          <td>github django setup python script</td>
+          <td>E-mail Domain</td>
       </tr>
       <tr>
-          <td>source_address:</td>
-          <td><code>172.16.17.56</code></td>
-      </tr>
-      <tr>
-          <td>source_port:</td>
-          <td><code>52155</code></td>
-      </tr>
-      <tr>
-          <td>destination_address:</td>
-          <td><code>177.53.143.89</code></td>
-      </tr>
-      <tr>
-          <td>destination_port:</td>
-          <td><code>443</code></td>
-      </tr>
-      <tr>
-          <td>time:</td>
-          <td><code>Mar, 13, 2021, 08:20 PM</code></td>
-      </tr>
-      <tr>
-          <td>Data:</td>
-          <td><code>....5...1..K|ÍtV.kE...Ù.c..b§.7rÊb.?&amp;........ÿ..</code></td>
-      </tr>
-  </tbody>
-</table>
-<table>
-  <thead>
-      <tr>
-          <th>Key:</th>
-          <th><code>Value</code></th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>type:</td>
-          <td><code>Firewall</code></td>
-      </tr>
-      <tr>
-          <td>source_address:</td>
-          <td><code>172.16.17.56</code></td>
-      </tr>
-      <tr>
-          <td>source_port:</td>
-          <td><code>52155</code></td>
-      </tr>
-      <tr>
-          <td>destination_address:</td>
-          <td><code>177.53.143.89</code></td>
-      </tr>
-      <tr>
-          <td>destination_port:</td>
-          <td><code>443</code></td>
-      </tr>
-      <tr>
-          <td>time:</td>
-          <td><code>Mar, 13, 2021, 08:20 PM</code></td>
-      </tr>
-      <tr>
-          <td>Data:</td>
-          <td><code>....}...y..K|Í|.....y.&lt;§¢jJê#.....mrZ¡.Ã..../.5.....</code></td>
+          <td><code>151.101.112.133</code></td>
+          <td>a github ip</td>
+          <td>IP Address</td>
       </tr>
   </tbody>
 </table>
 
-<h4 class="relative group">Thoughts
-    <div id="thoughts-1" class="anchor"></div>
+<h3 class="relative group">Step 3. Analyst Notes
+    <div id="step-3-analyst-notes" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#thoughts-1" aria-label="Anchor">#</a>
-    </span>
-    
-</h4>
-<blockquote><p>&ldquo;Ah, it&rsquo;s encrypted data being sent to a IP that aligns up perfectly with the time of the Malicious XLS alert&hellip; I&rsquo;m gonna initiate containment.&rdquo;</p>
-</blockquote>
-<h3 class="relative group">Endpoint (EDR Agent)
-    <div id="endpoint-edr-agent" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#endpoint-edr-agent" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-3-analyst-notes" aria-label="Anchor">#</a>
     </span>
     
 </h3>
-
-<h4 class="relative group">Actions
-    <div id="actions-1" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#actions-1" aria-label="Anchor">#</a>
-    </span>
-    
-</h4>
-<ul>
-<li>Initiate containment on host: <code>Sofia</code></li>
-</ul>
-
-<h4 class="relative group">Thoughts
-    <div id="thoughts-2" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#thoughts-2" aria-label="Anchor">#</a>
-    </span>
-    
-</h4>
-<blockquote><p>&ldquo;The logs are barren, like they&rsquo;ve been wiped.&rdquo;</p>
-</blockquote>
-<h3 class="relative group">File
-    <div id="file" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#file" aria-label="Anchor">#</a>
-    </span>
-    
-</h3>
-<table>
-  <thead>
-      <tr>
-          <th>Key</th>
-          <th>Value</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>VirusTotal:</td>
-          <td><a href="https://www.virustotal.com/gui/file/7bcd31bd41686c32663c7cabf42b18c50399e3b3b4533fc2ff002d9f2e058813/detection"  target="_blank" rel="noreferrer">46/65 (trojan.acao/docdl)</a></td>
-      </tr>
-      <tr>
-          <td>Hybrid Analysis:</td>
-          <td><a href="https://hybrid-analysis.com/sample/7bcd31bd41686c32663c7cabf42b18c50399e3b3b4533fc2ff002d9f2e058813/65889ce9182ab6fe0c0880d0"  target="_blank" rel="noreferrer">100/100 Malicious (CVE-2017-11882)</a></td>
-      </tr>
-  </tbody>
-</table>
-
-<h4 class="relative group">Thoughts
-    <div id="thoughts-3" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#thoughts-3" aria-label="Anchor">#</a>
-    </span>
-    
-</h4>
-<blockquote><p>&ldquo;The C2 address is <code>multiwaretecnologia.com.br</code> which resolves to <code>177.53.143.89</code> which is indeed the address the endpoint connected to.&rdquo;</p>
-</blockquote>
-<h3 class="relative group">IP
-    <div id="ip" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ip" aria-label="Anchor">#</a>
-    </span>
-    
-</h3>
-<table>
-  <thead>
-      <tr>
-          <th>Key</th>
-          <th>Value</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>VirusTotal:</td>
-          <td><a href="https://www.virustotal.com/gui/ip-address/177.53.143.89/detection"  target="_blank" rel="noreferrer">0/93</a></td>
-      </tr>
-      <tr>
-          <td>Talos Intelligence:</td>
-          <td><a href="https://talosintelligence.com/reputation_center/lookup?search=177.53.143.89"  target="_blank" rel="noreferrer">Neutral</a></td>
-      </tr>
-      <tr>
-          <td>AbuseIPDB:</td>
-          <td><a href="https://www.abuseipdb.com/check/177.53.143.89"  target="_blank" rel="noreferrer">Not Found</a></td>
-      </tr>
-  </tbody>
-</table>
-
-<h4 class="relative group">Thoughts
-    <div id="thoughts-4" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#thoughts-4" aria-label="Anchor">#</a>
-    </span>
-    
-</h4>
-<blockquote><p>&ldquo;Eh? The C2 address has no reports&hellip; Is this a new campaign, or a targeted campaign?&rdquo;</p>
-</blockquote>
-<h3 class="relative group">Email
-    <div id="email" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#email" aria-label="Anchor">#</a>
-    </span>
-    
-</h3>
-
-<h4 class="relative group">Thoughts
-    <div id="thoughts-5" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#thoughts-5" aria-label="Anchor">#</a>
-    </span>
-    
-</h4>
-<blockquote><p>&ldquo;No email stating this is a penetration test.&rdquo;</p>
+<blockquote><p>&ldquo;Verdict: False Positive. Closing Case. <br>
+Summary: Endpoint connected to a github url via wget to download a setup script for django. <br>
+Validated via: VirusTotal, GitHub. <br>
+Actions Taken: None.&rdquo;</p>
 </blockquote><hr>
 
 <h2 class="relative group">Determination
@@ -1462,8 +1228,8 @@
     
 </h3>
 <ul>
-<li>True Positive</li>
-<li>Escalate Case</li>
+<li>False Positive</li>
+<li>Closing Case</li>
 </ul>
 
 <h3 class="relative group">Reasoning
@@ -1476,116 +1242,11 @@
     
 </h3>
 <ul>
-<li>The file is malware. (VirusTotal &amp; Hybrid-Analysis)</li>
-<li>The endpoint connected to the C2 address, indicating the malware was indeed executed.</li>
-</ul>
-
-<h3 class="relative group">Actions
-    <div id="actions-2" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#actions-2" aria-label="Anchor">#</a>
-    </span>
-    
-</h3>
-<ul>
-<li>Endpoint containment was initiated.</li>
+<li>The URL they connected to was a well known good repository on GitHub.</li>
+<li>The script they were attempting to get was to set up Django; not malware.</li>
+<li>That traffic is not unexpected for a <code>gitUser</code> on a <code>gitServer</code>.</li>
 </ul>
 <hr>
-
-<h2 class="relative group">Playbook
-    <div id="playbook" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#playbook" aria-label="Anchor">#</a>
-    </span>
-    
-</h2>
-
-<h3 class="relative group">Questions
-    <div id="questions" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#questions" aria-label="Anchor">#</a>
-    </span>
-    
-</h3>
-<table>
-  <thead>
-      <tr>
-          <th>Questions</th>
-          <th>Answers</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Check if the malware is quarantined/cleaned</td>
-          <td>Not Quarantined</td>
-      </tr>
-      <tr>
-          <td>Analyze Malware</td>
-          <td>Malicious</td>
-      </tr>
-      <tr>
-          <td>Check If Someone Requested the C2</td>
-          <td>Accessed</td>
-      </tr>
-  </tbody>
-</table>
-
-<h3 class="relative group">Artifacts
-    <div id="artifacts" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#artifacts" aria-label="Anchor">#</a>
-    </span>
-    
-</h3>
-<table>
-  <thead>
-      <tr>
-          <th><code>Value</code></th>
-          <th>Comment</th>
-          <th>Type</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>7ccf88c0bbe3b29bf19d877c4596a8d4</code></td>
-          <td><code>trojan.acao/docdl</code></td>
-          <td>MD5 Hash</td>
-      </tr>
-      <tr>
-          <td><code>177.53.143.89</code></td>
-          <td>C2 IP</td>
-          <td>IP Address</td>
-      </tr>
-      <tr>
-          <td><code>https://multiwaretecnologia.com.br/js/Podaliri4.exe</code></td>
-          <td>Next stage for dropper.</td>
-          <td>URL</td>
-      </tr>
-  </tbody>
-</table>
-
-<h3 class="relative group">Notes
-    <div id="notes" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#notes" aria-label="Anchor">#</a>
-    </span>
-    
-</h3>
-<blockquote><p>&ldquo;True Positive. Escalating. <br>
-Summary: Endpoint obtained and ran malware. Containment Initiated. <br>
-Validated via: EDR Logs, Firewall logs, VirusTotal, Hybrid-Analysis. <br>
-Actions taken: Endpoint containment initiated.&rdquo;</p>
-</blockquote><hr>
 
 <h2 class="relative group">Final Thoughts
     <div id="final-thoughts" class="anchor"></div>
@@ -1596,7 +1257,7 @@ Actions taken: Endpoint containment initiated.&rdquo;</p>
     </span>
     
 </h2>
-<blockquote><p>&ldquo;Interesting how the C2 address&rsquo;s IP wasn&rsquo;t flagged. Shows that things aren&rsquo;t always detected at first so don&rsquo;t hold too much weight on &rsquo;neutral&rsquo; reputation results.&rdquo;</p>
+<blockquote><p>&ldquo;I can understand <em>why</em> it would alert on GitHub urls. However, the alerts should probably have a whitelist of sorts for repositories the organization is expecting and would reasonably allow.&rdquo;</p>
 </blockquote>
           
           
@@ -1729,8 +1390,8 @@ Actions taken: Endpoint containment initiated.&rdquo;</p>
           type="text/javascript"
           src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
           integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
-          data-oid="views_writeups/LetsDefend/SOC/138_77/index.md"
-          data-oid-likes="likes_writeups/LetsDefend/SOC/138_77/index.md"></script>
+          data-oid="views_writeups/LetsDefend/SOC/105_20/index.md"
+          data-oid-likes="likes_writeups/LetsDefend/SOC/105_20/index.md"></script>
       
     </section>
 
@@ -1748,15 +1409,15 @@ Actions taken: Endpoint containment initiated.&rdquo;</p>
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/writeups/letsdefend/soc/170_120/">
+              href="/writeups/letsdefend/soc/105_16/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;(Writeup) LetsDefend EventID: 120 - [SOC170 - Passwd Found in Requested URL - Possible LFI Attack]
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;(Writeup) LetsDefend EventID: 16 - [SOC105 - Requested T.I. URL address]
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
                 
-  <time datetime="2026-02-23T11:10:00&#43;00:00">February 23 2026</time>
+  <time datetime="2026-02-25T15:45:00&#43;00:00">February 25 2026</time>
 
               </span>
             
@@ -1766,15 +1427,15 @@ Actions taken: Endpoint containment initiated.&rdquo;</p>
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/writeups/letsdefend/soc/105_16/">
+              href="/writeups/letsdefend/soc/105_28/">
               <span class="leading-6">
-                (Writeup) LetsDefend EventID: 16 - [SOC105 - Requested T.I. URL address]&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                (Writeup) LetsDefend EventID: 28 - [SOC105 - Requested T.I. URL address]&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
                 
-  <time datetime="2026-02-25T15:45:00&#43;00:00">February 25 2026</time>
+  <time datetime="2026-02-26T10:24:00&#43;00:00">February 26 2026</time>
 
               </span>
             

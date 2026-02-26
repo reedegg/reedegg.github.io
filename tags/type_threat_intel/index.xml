@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Type_Threat_Intel on Policy to Packets</title>
+    <link>https://www.policytopackets.com/tags/type_threat_intel/</link>
+    <description>Recent content in Type_Threat_Intel on Policy to Packets</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>reedveggleston@gmail.com (Reed Eggleston)</managingEditor>
+    <webMaster>reedveggleston@gmail.com (Reed Eggleston)</webMaster>
+    <copyright>© 2026 Reed Eggleston</copyright>
+    <lastBuildDate>Thu, 26 Feb 2026 11:26:00 +0000</lastBuildDate><atom:link href="https://www.policytopackets.com/tags/type_threat_intel/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>(Writeup) LetsDefend EventID: 75 - [SOC105 - Requested T.I. URL address]</title>
+      <link>https://www.policytopackets.com/writeups/letsdefend/soc/105_75/</link>
+      <pubDate>Thu, 26 Feb 2026 11:26:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/soc/105_75/</guid>
+      <description>Investigating a threat intelligence alert triggered by a bit.ly URL, expanding the shortened link to its final destination, validating reputation across VirusTotal, and confirming the traffic was legitimate mobile application activity before closing as a false positive.</description>
+      
+    </item>
+    
+    <item>
+      <title>(Writeup) LetsDefend EventID: 28 - [SOC105 - Requested T.I. URL address]</title>
+      <link>https://www.policytopackets.com/writeups/letsdefend/soc/105_28/</link>
+      <pubDate>Thu, 26 Feb 2026 10:24:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/soc/105_28/</guid>
+      <description>Investigating a threat intelligence alert tied to a known malicious URL, validating indicators across external and internal TI sources, correlating proxy and endpoint logs, and determining the activity was part of an authorized internal firewall test.</description>
+      
+    </item>
+    
+    <item>
+      <title>(Writeup) LetsDefend EventID: 20 - [SOC105 - Requested T.I. URL address]</title>
+      <link>https://www.policytopackets.com/writeups/letsdefend/soc/105_20/</link>
+      <pubDate>Wed, 25 Feb 2026 17:09:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/soc/105_20/</guid>
+      <description>Investigating a threat intelligence alert after a server connected to a flagged URL, validating the IP, domain, and repository source, confirming legitimate GitHub activity, and closing the case as a false positive.</description>
+      
+    </item>
+    
+    <item>
+      <title>(Writeup) LetsDefend EventID: 16 - [SOC105 - Requested T.I. URL address]</title>
+      <link>https://www.policytopackets.com/writeups/letsdefend/soc/105_16/</link>
+      <pubDate>Wed, 25 Feb 2026 15:45:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/soc/105_16/</guid>
+      <description>Investigating a threat intelligence alert after an endpoint connected to a known malicious domain, correlating firewall logs to a macro-enabled Excel file execution, validating the malware through VirusTotal, and initiating containment following confirmed C2 communication.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

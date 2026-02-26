@@ -9,7 +9,17 @@
     <managingEditor>reedveggleston@gmail.com (Reed Eggleston)</managingEditor>
     <webMaster>reedveggleston@gmail.com (Reed Eggleston)</webMaster>
     <copyright>© 2026 Reed Eggleston</copyright>
-    <lastBuildDate>Mon, 23 Feb 2026 13:36:00 +0000</lastBuildDate><atom:link href="https://www.policytopackets.com/tags/macros/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Feb 2026 15:45:00 +0000</lastBuildDate><atom:link href="https://www.policytopackets.com/tags/macros/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>(Writeup) LetsDefend EventID: 16 - [SOC105 - Requested T.I. URL address]</title>
+      <link>https://www.policytopackets.com/writeups/letsdefend/soc/105_16/</link>
+      <pubDate>Wed, 25 Feb 2026 15:45:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/writeups/letsdefend/soc/105_16/</guid>
+      <description>Investigating a threat intelligence alert after an endpoint connected to a known malicious domain, correlating firewall logs to a macro-enabled Excel file execution, validating the malware through VirusTotal, and initiating containment following confirmed C2 communication.</description>
+      
+    </item>
     
     <item>
       <title>(Writeup) LetsDefend EventID: 77 - [SOC138 - Detected Suspicious Xls File]</title>

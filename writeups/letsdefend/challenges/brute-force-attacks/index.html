@@ -15,21 +15,20 @@
 
   
   
-    <title>Brute_Force &middot; Policy to Packets</title>
-    <meta name="title" content="Brute_Force &middot; Policy to Packets">
+    <title>(Writeup) LetsDefend Challenge - Brute Force Attacks &middot; Policy to Packets</title>
+    <meta name="title" content="(Writeup) LetsDefend Challenge - Brute Force Attacks &middot; Policy to Packets">
   
 
   
   
-    <meta name="description" content="Cybersecurity portfolio of Reed Eggleston, an entry-level SOC analyst focused on incident response, alert triage, malware analysis, and hands-on labs through HackTheBox and LetsDefend. Technical writeups and real-world investigation documentation.">
+    <meta name="description" content="Analyzing a PCAP and Linux auth.log to investigate HTTP, RDP, and SSH brute-force activity, identifying successful credential compromise, and quantifying failed login attempts.">
+  
+  
+    <meta name="keywords" content="Writeup,Challenge,Medium,Incident_Responder,Brute_Force,Wireshark,HTTP,RDP,SSH,">
   
   
   
-  
-  <link rel="canonical" href="https://www.policytopackets.com/tags/brute_force/">
-  
-    
-      <link rel="alternate" type="application/rss+xml" href="/tags/brute_force/index.xml" title="Policy to Packets" />
+  <link rel="canonical" href="https://www.policytopackets.com/writeups/letsdefend/challenges/brute-force-attacks/">
   
 
   
@@ -57,17 +56,26 @@
   
 
   
-  <meta property="og:url" content="https://www.policytopackets.com/tags/brute_force/">
+  <meta property="og:url" content="https://www.policytopackets.com/writeups/letsdefend/challenges/brute-force-attacks/">
   <meta property="og:site_name" content="Policy to Packets">
-  <meta property="og:title" content="Brute_Force">
-  <meta property="og:description" content="Cybersecurity portfolio of Reed Eggleston, an entry-level SOC analyst focused on incident response, alert triage, malware analysis, and hands-on labs through HackTheBox and LetsDefend. Technical writeups and real-world investigation documentation.">
+  <meta property="og:title" content="(Writeup) LetsDefend Challenge - Brute Force Attacks">
+  <meta property="og:description" content="Medium-level LetsDefend challenge focused on investigating brute-force attacks across HTTP, RDP (3389), and SSH services using Wireshark and Linux log analysis. Includes identifying targeted services, extracting valid credentials from network traffic, analyzing authentication attempts in auth.log, counting failed SSH logins, and mapping activity to MITRE ATT&amp;CK technique T1110 (Brute Force). Demonstrates practical incident response skills involving PCAP analysis, log parsing, and credential attack investigation.">
   <meta property="og:locale" content="en">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="writeups">
+    <meta property="article:published_time" content="2026-02-27T14:45:00+00:00">
+    <meta property="article:modified_time" content="2026-02-27T14:45:00+00:00">
+    <meta property="article:tag" content="Writeup">
+    <meta property="article:tag" content="Challenge">
+    <meta property="article:tag" content="Medium">
+    <meta property="article:tag" content="Incident_Responder">
+    <meta property="article:tag" content="Brute_Force">
+    <meta property="article:tag" content="Wireshark">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Brute_Force">
-  <meta name="twitter:description" content="Cybersecurity portfolio of Reed Eggleston, an entry-level SOC analyst focused on incident response, alert triage, malware analysis, and hands-on labs through HackTheBox and LetsDefend. Technical writeups and real-world investigation documentation.">
+  <meta name="twitter:title" content="(Writeup) LetsDefend Challenge - Brute Force Attacks">
+  <meta name="twitter:description" content="Medium-level LetsDefend challenge focused on investigating brute-force attacks across HTTP, RDP (3389), and SSH services using Wireshark and Linux log analysis. Includes identifying targeted services, extracting valid credentials from network traffic, analyzing authentication attempts in auth.log, counting failed SSH logins, and mapping activity to MITRE ATT&amp;CK technique T1110 (Brute Force). Demonstrates practical incident response skills involving PCAP analysis, log parsing, and credential attack investigation.">
 
   
   
@@ -224,12 +232,12 @@
   [{
     "@context": "https://schema.org",
     "@type": "Article",
-    "articleSection": "Tags",
-    "name": "Brute_Force",
-    "headline": "Brute_Force",
-    
+    "articleSection": "Writeups",
+    "name": "(Writeup) LetsDefend Challenge - Brute Force Attacks",
+    "headline": "(Writeup) LetsDefend Challenge - Brute Force Attacks",
+    "description": "Medium-level LetsDefend challenge focused on investigating brute-force attacks across HTTP, RDP (3389), and SSH services using Wireshark and Linux log analysis. Includes identifying targeted services, extracting valid credentials from network traffic, analyzing authentication attempts in auth.log, counting failed SSH logins, and mapping activity to MITRE ATT\u0026CK technique T1110 (Brute Force). Demonstrates practical incident response skills involving PCAP analysis, log parsing, and credential attack investigation.",
     "inLanguage": "en",
-    "url" : "https://www.policytopackets.com/tags/brute_force/",
+    "url" : "https://www.policytopackets.com/writeups/letsdefend/challenges/brute-force-attacks/",
     "author" : {
       "@type": "Person",
       "name": "Reed Eggleston"
@@ -240,10 +248,10 @@
     
     "dateModified": "2026-02-27T14:45:00\u002b00:00",
     
-    
+    "keywords": ["Writeup","Challenge","Medium","Incident_Responder","Brute_Force","Wireshark","HTTP","RDP","SSH"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "0"
+    "wordCount": "556"
   }]
   </script>
 
@@ -542,11 +550,19 @@
       <main id="main-content" class="grow">
         
   
-  
-  <header class="mt-5">
+  <article>
     
-      <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+    
+
+    
+    <header id="single_header" class="mt-0 max-w-prose"> 
+      
+        <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
   
+  
+    
+  
+    
   
     
   
@@ -560,74 +576,41 @@
 
   
   <li class="inline"> 
-    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/tags/"
-      >Tags</a
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/writeups/"
+      >Writeups</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline"> 
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/writeups/letsdefend/"
+      >LetsDefend</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline"> 
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/writeups/letsdefend/challenges/"
+      >Challenge</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
   
   <li class="hidden"> 
-    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/tags/brute_force/"
-      >Brute_Force</a
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/writeups/letsdefend/challenges/brute-force-attacks/"
+      >(Writeup) LetsDefend Challenge - Brute Force Attacks</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
 </ol>
 
 
-    
-    <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral">Brute_Force</h1>
-    <div class="mt-1 mb-2 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
-
-
-
-
-
-  
-  
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-  </div>
-
-
-    </div>
-  </header>
-
-  <section class="flex flex-col max-w-full mt-0 mb-5 prose dark:prose-invert lg:flex-row">
-    
-  </section>
-
-  
-    
-    
-    
-
-    
-
-      <section class="space-y-10 w-full">
+      <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral"> 
+        (Writeup) LetsDefend Challenge - Brute Force Attacks
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
-          
-          
-            
-
-
-
 
 
 
@@ -635,68 +618,6 @@
 
   
   
-  
-
-
-
-
-
-
-
-
-  
-  
-    
-
-    
-    
-      
-      
-        
-      
-        
-      
-        
-      
-    
-
-    
-    
-      
-      
-    
-
-    
-    
-      
-    
-  
-
-
-
-<article class="article-link--simple flex flex-col md:flex-row relative">
-  
-  <div class=" mt-3 md:mt-0">
-    <header class="items-center text-start text-xl font-semibold">
-      <a
-        
-          href="/writeups/letsdefend/challenges/brute-force-attacks/"
-        
-        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
-        <h2>
-          (Writeup) LetsDefend Challenge - Brute Force Attacks
-          
-        </h2>
-      </a>
-      
-      
-    </header>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      
-
-
-
-
 
 
 
@@ -873,294 +794,473 @@
 
 
 
-    </div>
-    
-      <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
-        Analyzing a PCAP and Linux auth.log to investigate HTTP, RDP, and SSH brute-force activity, identifying successful credential compromise, and quantifying failed login attempts.
       </div>
-    
-  </div>
-  <div class="px-6 pt-4 pb-2"></div>
-</article>
-
-          
-            
-
-
-
-
-
-
-
-
-  
-  
-  
-
-
-
-
-
-
-
-
-  
-  
-    
-
-    
-    
-      
-      
-        
-      
-        
-      
-        
-      
-    
-
-    
-    
-      
-      
-    
-
-    
-    
-      
-    
-  
-
-
-
-<article class="article-link--simple flex flex-col md:flex-row relative">
-  
-  <div class=" mt-3 md:mt-0">
-    <header class="items-center text-start text-xl font-semibold">
-      <a
-        
-          href="/writeups/letsdefend/challenges/investigate_web_attack/"
-        
-        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
-        <h2>
-          (Writeup) LetsDefend Challenge - Investigate Web Attack
-          
-        </h2>
-      </a>
-      
       
     </header>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
       
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
       
-  <time datetime="2026-02-23T12:14:00&#43;00:00">February 23 2026</time>
-
-    
-
-    
-    
+      
+      
+      
+        <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-10">
+            <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain bf-scrollbar rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#welcome">Welcome</a></li>
+    <li><a href="#challenge-overview">Challenge Overview</a>
+      <ul>
+        <li><a href="#scenario">Scenario</a></li>
+        <li><a href="#information">Information</a></li>
+      </ul>
+    </li>
+    <li><a href="#question-based-analysis">Question based Analysis</a></li>
+  </ul>
+</nav>
   </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#welcome">Welcome</a></li>
+    <li><a href="#challenge-overview">Challenge Overview</a>
+      <ul>
+        <li><a href="#scenario">Scenario</a></li>
+        <li><a href="#information">Information</a></li>
+      </ul>
+    </li>
+    <li><a href="#question-based-analysis">Question based Analysis</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
 
-  
 
-  
-  
-    <div class="flex flex-row flex-wrap items-center">
+<script>
+  (function () {
+    'use strict'
+
+    const SCROLL_OFFSET_RATIO = 0.33
+    const TOC_SELECTOR = '#TableOfContents'
+    const ANCHOR_SELECTOR = '.anchor'
+    const TOC_LINK_SELECTOR = 'a[href^="#"]'
+    const NESTED_LIST_SELECTOR = 'li ul'
+    const ACTIVE_CLASS = 'active'
+    let isJumpingToAnchor = false
+
+    function getActiveAnchorId(anchors, offsetRatio) {
+      const threshold = window.scrollY + window.innerHeight * offsetRatio
+      const tocLinks = [...document.querySelectorAll('#TableOfContents a[href^="#"]')]
+      const tocIds = new Set(tocLinks.map(link => link.getAttribute('href').substring(1)))
+
+      if (isJumpingToAnchor) {
+        for (let i = 0; i < anchors.length; i++) {
+          const anchor = anchors[i]
+          if (!tocIds.has(anchor.id)) continue
+          const top = anchor.getBoundingClientRect().top + window.scrollY
+          if (Math.abs(window.scrollY - top) < 100) {
+            return anchor.id
+          }
+        }
+      }
+
+      for (let i = anchors.length - 1; i >= 0; i--) {
+        const top = anchors[i].getBoundingClientRect().top + window.scrollY
+        if (top <= threshold && tocIds.has(anchors[i].id)) {
+          return anchors[i].id
+        }
+      }
+      return anchors.find(anchor => tocIds.has(anchor.id))?.id || ''
+    }
+
+    function updateTOC({ toc, anchors, links, scrollOffset, collapseInactive }) {
+      const activeId = getActiveAnchorId(anchors, scrollOffset)
+      if (!activeId) return
+
+      links.forEach(link => {
+        const isActive = link.getAttribute('href') === `#${activeId}`
+        link.classList.toggle(ACTIVE_CLASS, isActive)
+
+        if (collapseInactive) {
+          const ul = link.closest('li')?.querySelector('ul')
+          if (ul) ul.style.display = isActive ? '' : 'none'
+        }
+      })
+
+      if (collapseInactive) {
+        const activeLink = toc.querySelector(`a[href="#${CSS.escape(activeId)}"]`)
+        let el = activeLink
+        while (el && el !== toc) {
+          if (el.tagName === 'UL') el.style.display = ''
+          if (el.tagName === 'LI') el.querySelector('ul')?.style.setProperty('display', '')
+          el = el.parentElement
+        }
+      }
+    }
+
+    function initTOC() {
+      const toc = document.querySelector(TOC_SELECTOR)
+      if (!toc) return
+
+      const collapseInactive = false
+      const anchors = [...document.querySelectorAll(ANCHOR_SELECTOR)]
+      const links = [...toc.querySelectorAll(TOC_LINK_SELECTOR)]
+
+      if (collapseInactive) {
+        toc.querySelectorAll(NESTED_LIST_SELECTOR).forEach(ul => ul.style.display = 'none')
+      }
+
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          isJumpingToAnchor = true
+        })
+      })
+
+      const config = {
+        toc,
+        anchors,
+        links,
+        scrollOffset: SCROLL_OFFSET_RATIO,
+        collapseInactive
+      }
+
+      window.addEventListener('scroll', () => updateTOC(config), { passive: true })
+      window.addEventListener('hashchange', () => updateTOC(config), { passive: true })
+
+      updateTOC(config)
+    }
+
+    document.readyState === 'loading'
+      ? document.addEventListener('DOMContentLoaded', initTOC)
+      : initTOC()
+  })()
+</script>
+
+
+          </div>
+        </div>
       
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
         
-      
-        
+
+        <div class="article-content max-w-prose mb-20">
+          <hr class="mt-0 mb-10">
           
-            
-              <a class="relative mt-[0.5rem] me-2" href="/categories/letsdefend/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    LetsDefend
-  </span>
-</span>
-
-              </a>
-            
-          
-        
-      
-        
-      
-        
-          
-            
-              <a class="relative mt-[0.5rem] me-2" href="/tags/apache_http/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Apache_HTTP
-  </span>
-</span>
-
-              </a>
-            
-              <a class="relative mt-[0.5rem] me-2" href="/tags/bash/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Bash
-  </span>
-</span>
-
-              </a>
-            
-              <a class="relative mt-[0.5rem] me-2" href="/tags/brute_force/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Brute_Force
-  </span>
-</span>
-
-              </a>
-            
-              <a class="relative mt-[0.5rem] me-2" href="/tags/challenge/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Challenge
-  </span>
-</span>
-
-              </a>
-            
-              <a class="relative mt-[0.5rem] me-2" href="/tags/command_injection/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Command_Injection
-  </span>
-</span>
-
-              </a>
-            
-              <a class="relative mt-[0.5rem] me-2" href="/tags/easy/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Easy
-  </span>
-</span>
-
-              </a>
-            
-              <a class="relative mt-[0.5rem] me-2" href="/tags/forced_browsing/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Forced_Browsing
-  </span>
-</span>
-
-              </a>
-            
-              <a class="relative mt-[0.5rem] me-2" href="/tags/http/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    HTTP
-  </span>
-</span>
-
-              </a>
-            
-              <a class="relative mt-[0.5rem] me-2" href="/tags/security_analyst/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Security_Analyst
-  </span>
-</span>
-
-              </a>
-            
-              <a class="relative mt-[0.5rem] me-2" href="/tags/writeup/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Writeup
-  </span>
-</span>
-
-              </a>
-            
-          
-        
-      
-    </div>
-  
-
-  
-  
-
-
-
-    </div>
+<h2 class="relative group">Welcome
+    <div id="welcome" class="anchor"></div>
     
-      <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
-        Analyzing raw Apache access logs with Bash tools to identify reconnaissance with Nikto, forced browsing, successful login brute force activity, and command injection leading to account creation on the target system.
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#welcome" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>LetsDefend is a Blue Team Training platform.</li>
+<li>This writeup documents a Medium-level challenge focused on analyzing HTTP, RDP, and SSH Brute Forcing through a PCAP and Linux <code>auth.log</code>.</li>
+</ul>
+<hr>
+
+<h2 class="relative group">Challenge Overview
+    <div id="challenge-overview" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#challenge-overview" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p><strong>Role Targeted:</strong> Incident Responder <br>
+<strong>Skill Level:</strong> Medium <br></p>
+
+<h3 class="relative group">Scenario
+    <div id="scenario" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#scenario" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<blockquote><p>Our web server has been compromised, and it&rsquo;s up to you to investigate the breach. Dive into the system, analyze logs, dissect network traffic, and uncover clues to identify the attacker and determine the extent of the damage. Are you up for the challenge? <br>
+<strong>File Location</strong>: /root/Desktop/ChallengeFile/BruteForce.7z <br>
+<strong>File Password</strong>: infected</p>
+</blockquote>
+<h3 class="relative group">Information
+    <div id="information" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#information" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<blockquote><p>&ldquo;There are two files included in the archive: <code>BruteForce.pcap</code> and <code>auth.log</code>.&rdquo;</p>
+</blockquote><hr>
+
+<h2 class="relative group">Question based Analysis
+    <div id="question-based-analysis" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#question-based-analysis" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ol>
+<li>What is the IP address of the server targeted by the attacker&rsquo;s brute-force attack?
+<ul>
+<li>Opening the PCAP, the very top is four simultaneous connections from <code>192.168.190.137</code> to <code>51.116.96.181</code> on port <code>3389</code> which is the port for <code>Windows RDP</code>.</li>
+<li>Answer: <code>51.116.96.181</code></li>
+</ul>
+</li>
+<li>Which directory was targeted by the attacker&rsquo;s brute-force attempt?
+<ul>
+<li>This one actually threw me for a loop, because I thought it was referencing <code>rdp.client.dir</code> at first. It wasn&rsquo;t until I looked at the <code>Protocol Hierarchy</code> under the <code>Statistics</code> tab that I realized there was <code>HTTP</code> at the bottom of the PCAP. Easy to follow the HTTP streams and realize they are using the <code>POST</code> method with the attributes <code>username</code> and <code>password</code> on <code>index.php</code>.</li>
+<li>Answer: <code>index.php</code></li>
+</ul>
+</li>
+<li>Identify the correct username and password combination used for login.
+<ul>
+<li>To find the successful connection, I filtered <code>http and ip.src == 51.116.96.181 and !(data-text-lines contains &quot;Incorrect&quot;)</code> to only get http connections coming back from the server that isn&rsquo;t &ldquo;incorrect.&rdquo;</li>
+<li>We end up at packet number <code>22249</code> and by following the stream of this packet, we can get the answers we&rsquo;re looking for.</li>
+<li>Answer: <code>web-hacker:admin12345</code></li>
+</ul>
+</li>
+<li>How many user accounts did the attacker attempt to compromise via RDP brute-force?
+<ul>
+<li>Luckily because this capture is fairly small, we can just look by hand in <code>Wireshark</code> otherwise I&rsquo;d be installing <code>tshark</code>.</li>
+<li>If we filter by <code>rdp.userName</code> we get back a ton of <code>ClientInfo[Malformed Packet]</code> packets back.</li>
+<li>Looking at the first packet, the password sent is: <code>TestTest</code> and I&rsquo;m willing to bet the first attempt on each user is going to be <code>TestTest</code>.</li>
+<li>Filtering on <code>rdp.userName and rdp.password == &quot;TestTest&quot;</code> gives us 10 packets with unique usernames&hellip;</li>
+<li><em><strong>But that isn&rsquo;t the answer??</strong></em> Maybe they meant to put &ldquo;HTTP brute-force&rdquo;?</li>
+<li>Similar to our last filter, <code>urlencoded-form.value == &quot;TestTest&quot;</code> gives us a list of 7 packets with unique usernames.</li>
+<li>Answer: <code>7</code> works.</li>
+</ul>
+</li>
+<li>What is the “clientName” of the attacker&rsquo;s machine?
+<ul>
+<li>Much easier than the last. Filter: <code>rdp.client.name</code> will give us only packets that contain the client name.</li>
+<li>Answer: <code>t3m0-virtual-ma</code></li>
+</ul>
+</li>
+<li>When did the user last successfully log in via SSH, and who was it?
+<ul>
+<li>A quick <code>grep -i 'accepted' auth.log</code> gives us a list of successful ssh connections.</li>
+<li>Answer: <code>mmox:11:43:54</code></li>
+</ul>
+</li>
+<li>How many unsuccessful SSH connection attempts were made by the attacker?
+<ul>
+<li>A quick <code>grep -i 'failed password' auth.log | grep -vi 'repeated' | wc -l</code> gives us the number of failed logins, without the meta &ldquo;repeated&rdquo; logs being counted.</li>
+<li><em><strong>That isn&rsquo;t the answer?</strong></em> Do they want to count the meta information?</li>
+<li>Just doing <code>failed password' auth.log | wc -l</code> gives us the answer they&rsquo;re looking for&hellip;</li>
+<li>Answer: <code>7480</code></li>
+</ul>
+</li>
+<li>What technique is used to gain access?
+<ul>
+<li>A quick search on <a href="https://attack.mitre.org/techniques/T1110/"  target="_blank" rel="noreferrer">MITRE ATT&amp;CK</a> for &ldquo;Brute Force&rdquo; gives us the answer.</li>
+<li>Answer: <code>T1110</code></li>
+</ul>
+</li>
+</ol>
+
+          
+          
+          
+        </div>
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+      
+      
+        
+        
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
+        width="96"
+        height="96"
+        alt="Reed Eggleston"
+        src="/img/reed_hu_3612162cbd5d35d8.png"
+        data-zoom-src="/img/reed_hu_de34fe5471b8fc33.png">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Reed Eggleston
       </div>
     
+    
+      <div class="text-sm text-neutral-700 dark:text-neutral-400">B.S. in Cybersecurity | SSCP | CySA+ | PenTest+ | Project+</div>
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="mailto:reedveggleston@gmail.com"
+          target="_blank"
+          aria-label="Email"
+          title="Email"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+</span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/reedegg"
+          target="_blank"
+          aria-label="Github"
+          title="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://linkedin.com/in/reedegg"
+          target="_blank"
+          aria-label="Linkedin"
+          title="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></span></a
+        >
+      
+    
   </div>
-  <div class="px-6 pt-4 pb-2"></div>
-</article>
 
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-10"></div>
+  
+
+        
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
           
         
-      </section>
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_writeups/LetsDefend/Challenges/Brute Force Attacks/index.md"
+          data-oid-likes="likes_writeups/LetsDefend/Challenges/Brute Force Attacks/index.md"></script>
+      
+    </section>
+
     
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/writeups/letsdefend/challenges/disclose_the_agent/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;(Writeup) LetsDefend Challenge - Disclose The Agent
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                
+  <time datetime="2026-02-23T15:48:00&#43;00:00">February 23 2026</time>
 
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+        </span>
+      </div>
+    </div>
   
 
-  
+
+      
+    </footer>
+  </article>
 
         
 

@@ -3,25 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
+    <loc>https://www.policytopackets.com/writeups/letsdefend/challenges/brute-force-attacks/</loc>
+    <lastmod>2026-02-27T14:45:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.policytopackets.com/writeups/letsdefend/challenges/</loc>
+    <lastmod>2026-02-27T14:45:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.policytopackets.com/writeups/letsdefend/</loc>
+    <lastmod>2026-02-27T14:45:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.policytopackets.com/writeups/</loc>
+    <lastmod>2026-02-27T14:45:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.policytopackets.com/writeups/letsdefend/soc/137_76/</loc>
     <lastmod>2026-02-26T14:23:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.policytopackets.com/writeups/letsdefend/</loc>
-    <lastmod>2026-02-26T14:23:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://www.policytopackets.com/writeups/letsdefend/soc/</loc>
-    <lastmod>2026-02-26T14:23:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.policytopackets.com/writeups/</loc>
     <lastmod>2026-02-26T14:23:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -52,12 +64,6 @@
   </url>
   <url>
     <loc>https://www.policytopackets.com/writeups/letsdefend/challenges/disclose_the_agent/</loc>
-    <lastmod>2026-02-23T15:48:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.policytopackets.com/writeups/letsdefend/challenges/</loc>
     <lastmod>2026-02-23T15:48:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>

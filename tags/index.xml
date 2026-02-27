@@ -9,7 +9,97 @@
     <managingEditor>reedveggleston@gmail.com (Reed Eggleston)</managingEditor>
     <webMaster>reedveggleston@gmail.com (Reed Eggleston)</webMaster>
     <copyright>© 2026 Reed Eggleston</copyright>
-    <lastBuildDate>Thu, 26 Feb 2026 14:23:00 +0000</lastBuildDate><atom:link href="https://www.policytopackets.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 27 Feb 2026 14:45:00 +0000</lastBuildDate><atom:link href="https://www.policytopackets.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Brute_Force</title>
+      <link>https://www.policytopackets.com/tags/brute_force/</link>
+      <pubDate>Fri, 27 Feb 2026 14:45:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/brute_force/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Challenge</title>
+      <link>https://www.policytopackets.com/tags/challenge/</link>
+      <pubDate>Fri, 27 Feb 2026 14:45:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/challenge/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>HTTP</title>
+      <link>https://www.policytopackets.com/tags/http/</link>
+      <pubDate>Fri, 27 Feb 2026 14:45:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/http/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Incident_Responder</title>
+      <link>https://www.policytopackets.com/tags/incident_responder/</link>
+      <pubDate>Fri, 27 Feb 2026 14:45:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/incident_responder/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Medium</title>
+      <link>https://www.policytopackets.com/tags/medium/</link>
+      <pubDate>Fri, 27 Feb 2026 14:45:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/medium/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>RDP</title>
+      <link>https://www.policytopackets.com/tags/rdp/</link>
+      <pubDate>Fri, 27 Feb 2026 14:45:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/rdp/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>SSH</title>
+      <link>https://www.policytopackets.com/tags/ssh/</link>
+      <pubDate>Fri, 27 Feb 2026 14:45:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/ssh/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Wireshark</title>
+      <link>https://www.policytopackets.com/tags/wireshark/</link>
+      <pubDate>Fri, 27 Feb 2026 14:45:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/wireshark/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Writeup</title>
+      <link>https://www.policytopackets.com/tags/writeup/</link>
+      <pubDate>Fri, 27 Feb 2026 14:45:00 +0000</pubDate>
+      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
+      <guid>https://www.policytopackets.com/tags/writeup/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Macros</title>
@@ -82,16 +172,6 @@
     </item>
     
     <item>
-      <title>Writeup</title>
-      <link>https://www.policytopackets.com/tags/writeup/</link>
-      <pubDate>Thu, 26 Feb 2026 14:23:00 +0000</pubDate>
-      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://www.policytopackets.com/tags/writeup/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
       <title>False_Positive</title>
       <link>https://www.policytopackets.com/tags/false_positive/</link>
       <pubDate>Thu, 26 Feb 2026 11:26:00 +0000</pubDate>
@@ -142,16 +222,6 @@
     </item>
     
     <item>
-      <title>Challenge</title>
-      <link>https://www.policytopackets.com/tags/challenge/</link>
-      <pubDate>Mon, 23 Feb 2026 15:48:00 +0000</pubDate>
-      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://www.policytopackets.com/tags/challenge/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
       <title>Easy</title>
       <link>https://www.policytopackets.com/tags/easy/</link>
       <pubDate>Mon, 23 Feb 2026 15:48:00 +0000</pubDate>
@@ -167,16 +237,6 @@
       <pubDate>Mon, 23 Feb 2026 15:48:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
       <guid>https://www.policytopackets.com/tags/security_analyst/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Wireshark</title>
-      <link>https://www.policytopackets.com/tags/wireshark/</link>
-      <pubDate>Mon, 23 Feb 2026 15:48:00 +0000</pubDate>
-      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://www.policytopackets.com/tags/wireshark/</guid>
       <description></description>
       
     </item>
@@ -202,16 +262,6 @@
     </item>
     
     <item>
-      <title>Brute_Force</title>
-      <link>https://www.policytopackets.com/tags/brute_force/</link>
-      <pubDate>Mon, 23 Feb 2026 12:14:00 +0000</pubDate>
-      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://www.policytopackets.com/tags/brute_force/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
       <title>Command_Injection</title>
       <link>https://www.policytopackets.com/tags/command_injection/</link>
       <pubDate>Mon, 23 Feb 2026 12:14:00 +0000</pubDate>
@@ -227,16 +277,6 @@
       <pubDate>Mon, 23 Feb 2026 12:14:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
       <guid>https://www.policytopackets.com/tags/forced_browsing/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>HTTP</title>
-      <link>https://www.policytopackets.com/tags/http/</link>
-      <pubDate>Mon, 23 Feb 2026 12:14:00 +0000</pubDate>
-      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://www.policytopackets.com/tags/http/</guid>
       <description></description>
       
     </item>
@@ -417,16 +457,6 @@
       <pubDate>Sat, 14 Feb 2026 18:22:00 +0000</pubDate>
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
       <guid>https://www.policytopackets.com/tags/very_easy/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Medium</title>
-      <link>https://www.policytopackets.com/tags/medium/</link>
-      <pubDate>Sat, 14 Feb 2026 00:39:00 +0000</pubDate>
-      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://www.policytopackets.com/tags/medium/</guid>
       <description></description>
       
     </item>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Medium on Policy to Packets</title>
-    <link>https://www.policytopackets.com/tags/medium/</link>
-    <description>Recent content in Medium on Policy to Packets</description>
+    <title>Incident_Responder on Policy to Packets</title>
+    <link>https://www.policytopackets.com/tags/incident_responder/</link>
+    <description>Recent content in Incident_Responder on Policy to Packets</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>reedveggleston@gmail.com (Reed Eggleston)</managingEditor>
     <webMaster>reedveggleston@gmail.com (Reed Eggleston)</webMaster>
     <copyright>© 2026 Reed Eggleston</copyright>
-    <lastBuildDate>Fri, 27 Feb 2026 14:45:00 +0000</lastBuildDate><atom:link href="https://www.policytopackets.com/tags/medium/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 27 Feb 2026 14:45:00 +0000</lastBuildDate><atom:link href="https://www.policytopackets.com/tags/incident_responder/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>(Writeup) LetsDefend Challenge - Brute Force Attacks</title>
@@ -18,16 +18,6 @@
       <author>reedveggleston@gmail.com (Reed Eggleston)</author>
       <guid>https://www.policytopackets.com/writeups/letsdefend/challenges/brute-force-attacks/</guid>
       <description>Analyzing a PCAP and Linux auth.log to investigate HTTP, RDP, and SSH brute-force activity, identifying successful credential compromise, and quantifying failed login attempts.</description>
-      
-    </item>
-    
-    <item>
-      <title>(Writeup) LetsDefend Challenge - Excel 4.0 Macros</title>
-      <link>https://www.policytopackets.com/writeups/letsdefend/challenges/excel_4.0_macros/</link>
-      <pubDate>Sat, 14 Feb 2026 00:39:00 +0000</pubDate>
-      <author>reedveggleston@gmail.com (Reed Eggleston)</author>
-      <guid>https://www.policytopackets.com/writeups/letsdefend/challenges/excel_4.0_macros/</guid>
-      <description>Analyzing a malicious Excel 4.0 (XLM) macro document using XLMMacroDeobfuscator and oletools to identify process execution, regsvr32 abuse, and DLL payload behavior.</description>
       
     </item>
     
